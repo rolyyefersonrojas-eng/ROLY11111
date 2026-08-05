@@ -1,0 +1,2709 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>El Viaje de la Papa Nativa | CORPAPA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+    <style>
+        /* ============================================================
+           ESTILOS PREMIUM - PROCESO CORPAPA
+           ============================================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #3d2b1a;
+            --primary-dark: #2c1f14;
+            --primary-light: #5a4030;
+            --gold: #b8943c;
+            --gold-light: #d4b87a;
+            --gold-dark: #8a6f2a;
+            --cream: #f7f2eb;
+            --cream-dark: #ece4da;
+            --white: #ffffff;
+            --dark: #1f1610;
+            --text: #2d221a;
+            --text-light: #6a5a4a;
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.07);
+            --shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.12);
+            --shadow-premium: 0 30px 80px rgba(0, 0, 0, 0.10);
+            --transition: 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            --transition-slow: 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+            --gradient-gold: linear-gradient(135deg, #b8943c 0%, #d4b87a 45%, #a07d30 100%);
+            --gradient-gold-soft: linear-gradient(135deg, rgba(184, 148, 60, 0.12) 0%, rgba(212, 184, 122, 0.08) 100%);
+            --glass-bg: rgba(44, 31, 20, 0.25);
+            --glass-border: rgba(255, 255, 255, 0.06);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            color: var(--text);
+            background: var(--cream);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ::selection {
+            background: var(--gold);
+            color: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ----- SCROLLBAR ----- */
+        ::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--cream);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--gold);
+            border-radius: 10px;
+        }
+
+        /* ============================================================
+           ANIMACIONES
+           ============================================================ */
+        @keyframes fadeInZoom {
+            0% { opacity: 0; transform: scale(0.85) rotate(-2deg); filter: blur(8px); }
+            60% { opacity: 1; transform: scale(1.02) rotate(0.5deg); filter: blur(0); }
+            100% { opacity: 1; transform: scale(1) rotate(0deg); filter: blur(0); }
+        }
+
+        @keyframes slideUp {
+            0% { opacity: 0; transform: translateY(80px) scale(0.92); }
+            60% { opacity: 1; transform: translateY(-8px) scale(1.02); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        @keyframes slideInLeft {
+            0% { opacity: 0; transform: translateX(-80px) rotate(-5deg); }
+            60% { opacity: 1; transform: translateX(10px) rotate(2deg); }
+            100% { opacity: 1; transform: translateX(0) rotate(0deg); }
+        }
+
+        @keyframes slideInRight {
+            0% { opacity: 0; transform: translateX(80px) rotate(5deg); }
+            60% { opacity: 1; transform: translateX(-10px) rotate(-2deg); }
+            100% { opacity: 1; transform: translateX(0) rotate(0deg); }
+        }
+
+        @keyframes bounceIn {
+            0% { opacity: 0; transform: scale(0.3) rotate(-10deg); }
+            50% { opacity: 1; transform: scale(1.05) rotate(2deg); }
+            70% { transform: scale(0.95) rotate(-1deg); }
+            100% { transform: scale(1) rotate(0deg); }
+        }
+
+        @keyframes floatParticle {
+            0% { transform: translateY(0) translateX(0) scale(0); opacity: 0; }
+            20% { opacity: 0.8; transform: translateY(-20px) translateX(10px) scale(1); }
+            80% { opacity: 0.6; transform: translateY(-120px) translateX(30px) scale(0.8); }
+            100% { transform: translateY(-180px) translateX(50px) scale(0); opacity: 0; }
+        }
+
+        @keyframes floatLeaf {
+            0%, 100% { transform: translateY(0) rotate(0deg) scale(1); opacity: 0.06; }
+            25% { transform: translateY(-25px) rotate(15deg) scale(1.1); opacity: 0.12; }
+            50% { transform: translateY(-12px) rotate(-10deg) scale(0.9); opacity: 0.10; }
+            75% { transform: translateY(-30px) rotate(20deg) scale(1.05); opacity: 0.15; }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(184, 148, 60, 0.05); }
+            50% { box-shadow: 0 0 60px rgba(184, 148, 60, 0.20); }
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.05; transform: scale(0.8); }
+            50% { opacity: 0.4; transform: scale(1.3); }
+        }
+
+        @keyframes sparkle {
+            0% { transform: scale(0) rotate(0deg); opacity: 0; }
+            50% { transform: scale(1.4) rotate(180deg); opacity: 1; }
+            100% { transform: scale(0) rotate(360deg); opacity: 0; }
+        }
+
+        @keyframes bounceArrow {
+            0%, 100% { transform: translateY(0); opacity: 0.2; }
+            50% { transform: translateY(14px); opacity: 0.8; }
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            14% { transform: scale(1.15); }
+            28% { transform: scale(1); }
+            42% { transform: scale(1.08); }
+            70% { transform: scale(1); }
+        }
+
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(4deg); }
+        }
+
+        @keyframes shimmerText {
+            0% { background-position: -300% 0; }
+            100% { background-position: 300% 0; }
+        }
+
+        @keyframes pulseRing {
+            0% { transform: scale(0.8); opacity: 0.8; }
+            100% { transform: scale(2); opacity: 0; }
+        }
+
+        @keyframes slideDown {
+            0% { opacity: 0; transform: translateY(-60px) scale(0.9); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        @keyframes scalePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.06); }
+        }
+
+        @keyframes glowPulse {
+            0%, 100% { text-shadow: 0 0 20px rgba(184, 148, 60, 0.1); }
+            50% { text-shadow: 0 0 60px rgba(184, 148, 60, 0.4), 0 0 100px rgba(184, 148, 60, 0.15); }
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes borderGlow {
+            0%, 100% { border-color: rgba(184, 148, 60, 0.2); box-shadow: 0 0 40px rgba(184, 148, 60, 0.05); }
+            50% { border-color: rgba(184, 148, 60, 0.6); box-shadow: 0 0 80px rgba(184, 148, 60, 0.15); }
+        }
+
+        /* ============================================================
+           CURSOR PERSONALIZADO
+           ============================================================ */
+        .cursor {
+            position: fixed;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 2px solid rgba(184, 148, 60, 0.20);
+            pointer-events: none;
+            z-index: 99999;
+            transition: transform 0.15s ease, width 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+                        height 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+                        border-color 0.3s ease, background 0.3s ease,
+                        box-shadow 0.3s ease;
+            transform: translate(-50%, -50%);
+            background: rgba(184, 148, 60, 0.02);
+            backdrop-filter: blur(2px);
+            box-shadow: 0 0 40px rgba(184, 148, 60, 0.02);
+        }
+        .cursor.hover {
+            width: 55px;
+            height: 55px;
+            border-color: var(--gold);
+            background: rgba(184, 148, 60, 0.08);
+            box-shadow: 0 0 80px rgba(184, 148, 60, 0.08);
+        }
+        .cursor.hover-btn {
+            width: 70px;
+            height: 70px;
+            border-color: var(--gold-light);
+            background: rgba(184, 148, 60, 0.12);
+            box-shadow: 0 0 120px rgba(184, 148, 60, 0.12);
+        }
+        .cursor .cursor-dot {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--gold);
+            transition: 0.3s ease;
+        }
+        .cursor.hover .cursor-dot {
+            width: 9px;
+            height: 9px;
+            box-shadow: 0 0 40px rgba(184, 148, 60, 0.4);
+        }
+        .cursor .cursor-ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 1px solid rgba(184, 148, 60, 0.04);
+            animation: pulseRing 3s ease-in-out infinite;
+        }
+        @media (max-width: 1024px) {
+            .cursor { display: none; }
+        }
+
+        /* ============================================================
+           PRELOADER
+           ============================================================ */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 99999;
+            transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), visibility 1s ease;
+        }
+        .preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .preloader .preloader-content {
+            text-align: center;
+            position: relative;
+        }
+        .preloader .preloader-logo {
+            font-family: 'Playfair Display', serif;
+            color: var(--gold-light);
+            font-size: 3.2rem;
+            letter-spacing: 14px;
+            opacity: 0;
+            animation: fadeInZoom 1s ease 0.3s forwards;
+        }
+        .preloader .preloader-sub {
+            color: rgba(255,255,255,0.18);
+            font-size: 0.7rem;
+            letter-spacing: 7px;
+            text-transform: uppercase;
+            margin-top: 8px;
+            opacity: 0;
+            animation: slideUp 0.8s ease 1s forwards;
+        }
+        .preloader .preloader-line {
+            width: 0;
+            height: 2px;
+            background: var(--gradient-gold);
+            margin: 18px auto 0;
+            border-radius: 4px;
+            animation: preloaderLine 1.8s ease 0.5s forwards;
+        }
+        @keyframes preloaderLine {
+            0% { width: 0; }
+            100% { width: 130px; }
+        }
+        .preloader .preloader-spinner {
+            position: absolute;
+            top: -22px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 75px;
+            height: 75px;
+            border: 2px solid rgba(184,148,60,0.03);
+            border-top: 2px solid var(--gold);
+            border-radius: 50%;
+            animation: spin 1s linear infinite, fadeInZoom 0.5s ease 0.2s forwards;
+        }
+        @keyframes spin {
+            0% { transform: translateX(-50%) rotate(0deg); }
+            100% { transform: translateX(-50%) rotate(360deg); }
+        }
+
+        /* ============================================================
+           PROGRESS BAR
+           ============================================================ */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--gradient-gold);
+            z-index: 10000;
+            width: 0%;
+            transition: width 0.1s ease;
+            animation: pulseGlow 2s ease-in-out infinite;
+            box-shadow: 0 0 30px rgba(184,148,60,0.15);
+        }
+
+        /* ============================================================
+           NAVBAR
+           ============================================================ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                        background 0.5s ease,
+                        backdrop-filter 0.5s ease,
+                        box-shadow 0.5s ease,
+                        padding 0.4s ease;
+            background: rgba(44, 31, 20, 0.12);
+            backdrop-filter: blur(8px) saturate(1.1);
+            -webkit-backdrop-filter: blur(8px) saturate(1.1);
+            transform: translateY(0);
+            opacity: 0;
+            animation: slideDown 0.9s ease 1.4s forwards;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+        .navbar.hidden {
+            transform: translateY(-100%);
+        }
+        .navbar.scrolled {
+            background: rgba(44, 31, 20, 0.20);
+            backdrop-filter: blur(20px) saturate(1.3);
+            -webkit-backdrop-filter: blur(20px) saturate(1.3);
+            padding: 12px 0;
+            box-shadow: 0 4px 60px rgba(0, 0, 0, 0.10);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        }
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-shrink: 0;
+        }
+
+        .nav-logo {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .nav-logo img {
+            height: 55px;
+            width: auto;
+            filter: drop-shadow(0 0 40px rgba(184, 148, 60, 0.05));
+            transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+                        filter 0.5s ease;
+        }
+        .nav-logo img:hover {
+            transform: scale(1.06) rotate(-2deg);
+            filter: drop-shadow(0 0 50px rgba(184, 148, 60, 0.12));
+        }
+
+        .nav-divider {
+            width: 1px;
+            height: 38px;
+            background: rgba(255, 255, 255, 0.06);
+            flex-shrink: 0;
+        }
+        .nav-title {
+            font-family: 'Montserrat', 'Inter', sans-serif;
+            font-weight: 700;
+            color: #ffffff;
+            font-size: 0.6rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            line-height: 1.3;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(120deg, #ffffff 0%, #ffffff 30%, #f0e6c0 50%, #ffffff 70%, #ffffff 100%);
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmerText 6s ease-in-out infinite;
+        }
+        .nav-title .line1 { font-size: 0.75rem; }
+        .nav-title .line2 { font-size: 0.65rem; }
+        .nav-title .line3 { font-size: 0.65rem; }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+            align-items: center;
+        }
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.65);
+            font-weight: 500;
+            font-size: 0.85rem;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            letter-spacing: 0.5px;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-gold);
+            transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border-radius: 4px;
+        }
+        .nav-links a:hover {
+            color: var(--white);
+        }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        .nav-links .btn-contact {
+            background: var(--gradient-gold);
+            color: var(--dark);
+            padding: 8px 30px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 0 4px 30px rgba(184, 148, 60, 0.10);
+            position: relative;
+            overflow: hidden;
+            background-size: 200% 100%;
+            animation: shimmer 4s infinite;
+            text-shadow: none;
+        }
+        .nav-links .btn-contact:hover {
+            transform: scale(1.06) translateY(-2px);
+            box-shadow: 0 8px 45px rgba(184, 148, 60, 0.20);
+        }
+        .nav-links .btn-contact::after { display: none; }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+            padding: 4px;
+            flex-shrink: 0;
+        }
+        .hamburger span {
+            width: 28px;
+            height: 2px;
+            background: var(--white);
+            border-radius: 4px;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            opacity: 0.8;
+        }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+
+        /* ============================================================
+           BOTONES
+           ============================================================ */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--gradient-gold);
+            color: var(--dark);
+            padding: 16px 44px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 8px 40px rgba(184, 148, 60, 0.15);
+            position: relative;
+            overflow: hidden;
+            background-size: 200% 100%;
+            animation: shimmer 5s infinite;
+        }
+        .btn-primary:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 15px 60px rgba(184, 148, 60, 0.25);
+        }
+        .btn-primary .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.30);
+            animation: ripple 0.6s linear;
+            pointer-events: none;
+        }
+        @keyframes ripple {
+            0% { transform: scale(0); opacity: 1; }
+            100% { transform: scale(3); opacity: 0; }
+        }
+
+        .btn-outline-light {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(12px);
+            color: var(--white);
+            padding: 16px 44px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border: 2px solid rgba(255, 255, 255, 0.06);
+            cursor: pointer;
+        }
+        .btn-outline-light:hover {
+            background: var(--white);
+            color: var(--primary);
+            transform: translateY(-6px) scale(1.03);
+            border-color: var(--white);
+            box-shadow: 0 15px 60px rgba(255, 255, 255, 0.04);
+        }
+
+        /* ============================================================
+           HERO CON VIDEO - ESPACIADO CORREGIDO
+           ============================================================ */
+        .hero-video {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            color: var(--white);
+            text-align: center;
+            cursor: default;
+            padding: 120px 0 80px 0;
+        }
+
+        .hero-video video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .hero-video .hero-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background:
+                radial-gradient(ellipse at 30% 30%, rgba(44, 31, 20, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 70%, rgba(44, 31, 20, 0.30) 0%, transparent 50%),
+                linear-gradient(180deg, rgba(44, 31, 20, 0.30), rgba(30, 22, 16, 0.50));
+        }
+
+        .hero-video .particles-container {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .hero-video .particle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 50%;
+            animation: floatParticle 12s ease-in-out infinite;
+        }
+        .hero-video .particle:nth-child(1) { left: 5%; animation-delay: 0s; }
+        .hero-video .particle:nth-child(2) { left: 15%; animation-delay: 1.2s; width: 8px; height: 8px; }
+        .hero-video .particle:nth-child(3) { left: 30%; animation-delay: 2.5s; }
+        .hero-video .particle:nth-child(4) { left: 45%; animation-delay: 0.8s; width: 10px; height: 10px; }
+        .hero-video .particle:nth-child(5) { left: 60%; animation-delay: 3.2s; }
+        .hero-video .particle:nth-child(6) { left: 75%; animation-delay: 1.8s; width: 7px; height: 7px; }
+        .hero-video .particle:nth-child(7) { left: 90%; animation-delay: 4s; }
+        .hero-video .particle:nth-child(8) { left: 10%; animation-delay: 2s; width: 5px; height: 5px; }
+        .hero-video .particle:nth-child(9) { left: 50%; animation-delay: 3.5s; }
+        .hero-video .particle:nth-child(10) { left: 80%; animation-delay: 1s; width: 9px; height: 9px; }
+
+        .hero-video .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 850px;
+            padding: 0 24px;
+            animation: fadeInZoom 1.2s ease 0.5s forwards;
+            opacity: 0;
+            margin-top: 20px;
+        }
+
+        .hero-video .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(184, 148, 60, 0.08);
+            backdrop-filter: blur(16px);
+            padding: 12px 30px;
+            border-radius: 60px;
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            color: var(--gold-light);
+            border: 1px solid rgba(184, 148, 60, 0.06);
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            font-weight: 600;
+            opacity: 0;
+            animation: slideUp 0.8s ease 0.8s forwards, pulseGlow 3s ease-in-out infinite 1.5s;
+        }
+        .hero-video .hero-badge i {
+            animation: floatSlow 3s ease-in-out infinite;
+            color: var(--gold);
+        }
+
+        .hero-video h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 5.2rem;
+            font-weight: 900;
+            line-height: 1.02;
+            margin-bottom: 16px;
+            text-shadow: 0 4px 60px rgba(0, 0, 0, 0.25);
+            animation: fadeInZoom 1s ease 1s forwards;
+            opacity: 0;
+        }
+        .hero-video h1 span {
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            animation: glowPulse 4s ease-in-out infinite 2s;
+        }
+
+        .hero-video .hero-subtitle {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 300;
+            margin-bottom: 18px;
+            animation: slideUp 0.9s ease 1.2s forwards;
+            opacity: 0;
+        }
+
+        .hero-video .hero-description {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.65);
+            max-width: 600px;
+            margin: 0 auto 36px;
+            line-height: 1.9;
+            font-weight: 300;
+            animation: slideUp 0.9s ease 1.4s forwards;
+            opacity: 0;
+        }
+
+        .hero-video .hero-buttons {
+            animation: slideUp 0.9s ease 1.6s forwards;
+            opacity: 0;
+            display: flex;
+            gap: 18px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .hero-video .scroll-hint {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.15);
+            font-size: 0.6rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            opacity: 0;
+            animation: slideUp 0.9s ease 1.8s forwards, bounceArrow 2.5s ease-in-out infinite 2.5s;
+        }
+        .hero-video .scroll-hint i {
+            font-size: 1.4rem;
+            color: var(--gold-light);
+            opacity: 0.25;
+            animation: bounceArrow 2.5s ease-in-out infinite;
+        }
+
+        /* ============================================================
+           PROCESO - CRECIMIENTO DE LA PLANTA
+           ============================================================ */
+        .plant-growth {
+            padding: 90px 0 70px;
+            background: var(--cream);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .plant-growth .section-header {
+            text-align: center;
+            margin-bottom: 55px;
+            opacity: 0;
+            animation: slideUp 0.8s ease 0.2s forwards;
+        }
+        .plant-growth .section-header .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+        .plant-growth .section-header .section-badge::before {
+            content: '';
+            width: 24px;
+            height: 2px;
+            background: var(--gradient-gold);
+            opacity: 0.25;
+            margin-right: 6px;
+            border-radius: 4px;
+        }
+        .plant-growth .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .plant-growth .section-header h2 .highlight {
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: glowPulse 3s ease-in-out infinite;
+        }
+        .plant-growth .section-header p {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            max-width: 540px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .plant-stem {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .stem-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom,
+                rgba(184, 148, 60, 0.01) 0%,
+                rgba(184, 148, 60, 0.08) 20%,
+                rgba(184, 148, 60, 0.20) 40%,
+                var(--gold) 50%,
+                rgba(184, 148, 60, 0.20) 60%,
+                rgba(184, 148, 60, 0.08) 80%,
+                rgba(184, 148, 60, 0.01) 100%);
+            transform: translateX(-50%);
+            border-radius: 4px;
+            box-shadow: 0 0 60px rgba(184, 148, 60, 0.02);
+        }
+        .stem-line::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom,
+                transparent 0%,
+                rgba(184, 148, 60, 0.04) 30%,
+                rgba(184, 148, 60, 0.08) 50%,
+                rgba(184, 148, 60, 0.04) 70%,
+                transparent 100%);
+            animation: shimmer 5s linear infinite;
+            background-size: 200% 100%;
+        }
+
+        .growth-node {
+            display: flex;
+            align-items: center;
+            margin-bottom: 65px;
+            position: relative;
+            opacity: 0;
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .growth-node.visible {
+            opacity: 1;
+        }
+
+        .growth-node:nth-child(odd) {
+            flex-direction: row;
+        }
+        .growth-node:nth-child(odd).visible {
+            animation: slideInLeft 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+        .growth-node:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .growth-node:nth-child(even).visible {
+            animation: slideInRight 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+
+        .node-image {
+            flex: 0 0 280px;
+            height: 220px;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-premium);
+            transition: all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            border: 2px solid rgba(184, 148, 60, 0.02);
+            cursor: pointer;
+        }
+        .node-image:hover {
+            transform: scale(1.04) translateY(-8px) rotate(-1deg);
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(184, 148, 60, 0.06);
+        }
+        .node-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #f0ebe4;
+            transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .node-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .node-image .image-badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: var(--gradient-gold);
+            color: var(--dark);
+            padding: 5px 18px;
+            border-radius: 60px;
+            font-size: 0.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            box-shadow: 0 4px 25px rgba(184, 148, 60, 0.15);
+            animation: scalePulse 3s ease-in-out infinite;
+            z-index: 2;
+        }
+
+        .node-image .image-icon {
+            position: absolute;
+            bottom: 14px;
+            right: 14px;
+            background: rgba(44, 31, 20, 0.40);
+            backdrop-filter: blur(12px);
+            border-radius: 50%;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-light);
+            font-size: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            z-index: 2;
+        }
+        .node-image:hover .image-icon {
+            transform: scale(1.15) rotate(-15deg);
+            background: rgba(44, 31, 20, 0.60);
+            border-color: rgba(184, 148, 60, 0.08);
+        }
+
+        .node-connector {
+            flex: 0 0 70px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .node-connector .connector-circle {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: var(--gradient-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--dark);
+            box-shadow: 0 4px 35px rgba(184, 148, 60, 0.20);
+            position: relative;
+            z-index: 2;
+            transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .node-connector .connector-circle::after {
+            content: '';
+            position: absolute;
+            inset: -8px;
+            border-radius: 50%;
+            border: 2px solid rgba(184, 148, 60, 0.06);
+            animation: pulseRing 3s ease-in-out infinite;
+        }
+        .growth-node:hover .connector-circle {
+            transform: scale(1.15) rotate(-10deg);
+            box-shadow: 0 8px 50px rgba(184, 148, 60, 0.30);
+        }
+
+        .node-connector .connector-line {
+            width: 2px;
+            flex: 1;
+            min-height: 20px;
+            background: linear-gradient(to bottom, rgba(184, 148, 60, 0.08), rgba(184, 148, 60, 0.01));
+        }
+
+        .node-content {
+            flex: 1;
+            padding: 0 24px;
+            min-width: 0;
+        }
+
+        .node-content .node-step {
+            font-size: 0.6rem;
+            color: var(--gold);
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        .node-content .node-subtitle {
+            font-size: 0.85rem;
+            color: var(--gold-dark);
+            font-style: italic;
+            font-weight: 400;
+            margin-bottom: 4px;
+            opacity: 0.7;
+        }
+        .node-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.7rem;
+            color: var(--primary);
+            margin: 2px 0 8px;
+            transition: all 0.4s ease;
+        }
+        .growth-node:hover .node-content h3 {
+            color: var(--gold-dark);
+            transform: translateX(4px);
+        }
+        .node-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+        .node-content .node-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .node-content .node-tags span {
+            background: rgba(184, 148, 60, 0.05);
+            padding: 5px 18px;
+            border-radius: 60px;
+            font-size: 0.7rem;
+            color: var(--gold-dark);
+            font-weight: 500;
+            border: 1px solid rgba(184, 148, 60, 0.03);
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .node-content .node-tags span:hover {
+            background: rgba(184, 148, 60, 0.10);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 4px 25px rgba(184, 148, 60, 0.05);
+            border-color: rgba(184, 148, 60, 0.08);
+        }
+
+        /* ============================================================
+           ETAPA 9 - VERSIÓN PROFESIONAL
+           ============================================================ */
+        .growth-node.final-node .node-image {
+            border: 3px solid var(--gold);
+            box-shadow: 0 0 80px rgba(184, 148, 60, 0.15);
+            animation: borderGlow 3s ease-in-out infinite;
+        }
+
+        .growth-node.final-node .node-image .image-badge {
+            background: var(--gradient-gold);
+            color: var(--dark);
+            font-weight: 800;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 40px rgba(184, 148, 60, 0.30);
+            padding: 6px 24px;
+            font-size: 0.7rem;
+        }
+
+        .growth-node.final-node .node-content h3 {
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 900;
+            animation: glowPulse 3s ease-in-out infinite;
+            font-size: 1.9rem;
+        }
+
+        .growth-node.final-node .node-content .node-step {
+            color: var(--gold-dark);
+            font-weight: 800;
+            letter-spacing: 4px;
+            font-size: 0.65rem;
+        }
+
+        .growth-node.final-node .node-content .node-subtitle {
+            color: var(--gold);
+            font-style: italic;
+            font-weight: 600;
+            opacity: 1;
+            font-size: 0.9rem;
+        }
+
+        .growth-node.final-node .connector-circle {
+            background: var(--gradient-gold);
+            animation: pulseGlow 2s ease-in-out infinite;
+            box-shadow: 0 0 60px rgba(184, 148, 60, 0.30);
+            font-size: 1.2rem;
+        }
+
+        .growth-node.final-node .node-content .node-tags span {
+            background: rgba(184, 148, 60, 0.08);
+            border-color: rgba(184, 148, 60, 0.10);
+            color: var(--gold-dark);
+            font-weight: 600;
+            font-size: 0.75rem;
+            padding: 6px 20px;
+        }
+
+        .growth-node.final-node .node-content .node-tags span i {
+            margin-right: 8px;
+            color: var(--gold);
+            font-size: 0.8rem;
+        }
+
+        .growth-node.final-node .node-content .node-tags span:hover {
+            background: rgba(184, 148, 60, 0.18);
+            transform: translateY(-3px) scale(1.04);
+            border-color: var(--gold);
+            box-shadow: 0 6px 30px rgba(184, 148, 60, 0.10);
+        }
+
+        .growth-node.final-node .node-content .final-message-highlight {
+            margin-top: 16px;
+            padding: 18px 28px;
+            background: linear-gradient(135deg, rgba(184, 148, 60, 0.06) 0%, rgba(212, 184, 122, 0.03) 100%);
+            border-left: 4px solid var(--gold);
+            border-radius: 12px;
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.9;
+            transition: all 0.4s ease;
+        }
+
+        .growth-node.final-node .node-content .final-message-highlight:hover {
+            background: linear-gradient(135deg, rgba(184, 148, 60, 0.10) 0%, rgba(212, 184, 122, 0.05) 100%);
+            transform: translateX(4px);
+            box-shadow: 0 4px 30px rgba(184, 148, 60, 0.04);
+        }
+
+        .growth-node.final-node .node-content .final-message-highlight strong {
+            color: var(--gold-dark);
+            font-weight: 700;
+        }
+
+        .growth-node.final-node .node-content .step-9-highlight {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin: 8px 0 4px;
+        }
+
+        .growth-node.final-node .node-content .step-9-highlight i {
+            color: var(--gold);
+            margin-right: 10px;
+        }
+
+        .growth-node.final-node .node-content .final-quote {
+            font-weight: 600;
+            color: var(--primary);
+            margin-top: 4px;
+            font-size: 0.95rem;
+        }
+        .growth-node.final-node .node-content .final-quote i {
+            color: var(--gold);
+            margin: 0 6px;
+        }
+
+        /* ============================================================
+           MODAL PARA AMPLIAR IMÁGENES
+           ============================================================ */
+        .image-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.92);
+            z-index: 99999;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            padding: 40px;
+        }
+        .image-modal.active {
+            display: flex;
+            animation: fadeInZoom 0.4s ease forwards;
+        }
+        .image-modal img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 16px;
+            box-shadow: 0 20px 80px rgba(0,0,0,0.6);
+            border: 2px solid rgba(184,148,60,0.15);
+        }
+        .image-modal .modal-close {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            color: rgba(255,255,255,0.3);
+            font-size: 2.5rem;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+        .image-modal .modal-close:hover {
+            color: var(--gold);
+            transform: rotate(90deg) scale(1.1);
+        }
+        .image-modal .modal-counter {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255,255,255,0.2);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            font-weight: 300;
+        }
+        .image-modal .modal-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255,255,255,0.15);
+            font-size: 2.5rem;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            padding: 20px;
+            user-select: none;
+        }
+        .image-modal .modal-nav:hover {
+            color: var(--gold);
+            transform: translateY(-50%) scale(1.1);
+        }
+        .image-modal .modal-nav.prev { left: 20px; }
+        .image-modal .modal-nav.next { right: 20px; }
+
+        @media (max-width: 768px) {
+            .image-modal .modal-nav { font-size: 1.8rem; padding: 10px; }
+            .image-modal .modal-nav.prev { left: 5px; }
+            .image-modal .modal-nav.next { right: 5px; }
+            .image-modal .modal-close { top: 20px; right: 20px; font-size: 1.8rem; }
+            .image-modal { padding: 20px; }
+        }
+
+        .leaf-deco {
+            position: absolute;
+            font-size: 2.8rem;
+            color: var(--gold);
+            opacity: 0.02;
+            animation: floatLeaf 12s ease-in-out infinite;
+            pointer-events: none;
+        }
+        .leaf-deco:nth-child(1) { top: 3%; left: 2%; animation-delay: 0s; }
+        .leaf-deco:nth-child(2) { top: 16%; right: 4%; animation-delay: 2.5s; }
+        .leaf-deco:nth-child(3) { top: 38%; left: 1%; animation-delay: 5s; }
+        .leaf-deco:nth-child(4) { top: 62%; right: 2%; animation-delay: 7.5s; }
+        .leaf-deco:nth-child(5) { top: 85%; left: 5%; animation-delay: 3s; }
+        .leaf-deco:nth-child(6) { top: 48%; right: 8%; animation-delay: 4.5s; }
+        .leaf-deco:nth-child(7) { top: 10%; left: 50%; animation-delay: 1.5s; font-size: 3.5rem; }
+        .leaf-deco:nth-child(8) { bottom: 5%; right: 50%; animation-delay: 6s; font-size: 4rem; }
+
+        /* ============================================================
+           PANTALLA FINAL
+           ============================================================ */
+        .journey-final {
+            padding: 100px 0;
+            background: 
+                linear-gradient(160deg, rgba(44, 31, 20, 0.95) 0%, rgba(30, 22, 16, 0.90) 50%, rgba(44, 31, 20, 0.95) 100%),
+                radial-gradient(ellipse at 30% 20%, rgba(184, 148, 60, 0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 80%, rgba(184, 148, 60, 0.05) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(184, 148, 60, 0.03) 0%, transparent 70%);
+            color: var(--white);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .journey-final::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(ellipse at 20% 20%, rgba(184, 148, 60, 0.04) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(184, 148, 60, 0.02) 0%, transparent 50%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .journey-final .final-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 2;
+            opacity: 0;
+            animation: bounceIn 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s forwards;
+        }
+
+        .journey-final .final-icon {
+            font-size: 5.5rem;
+            color: var(--gold);
+            margin-bottom: 18px;
+            display: inline-block;
+            animation: floatSlow 4s ease-in-out infinite, glowPulse 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 80px rgba(184, 148, 60, 0.10));
+        }
+        .journey-final .final-icon i {
+            animation: sparkle 4s ease-in-out infinite;
+        }
+
+        .journey-final .final-badge {
+            display: inline-block;
+            background: rgba(184, 148, 60, 0.08);
+            backdrop-filter: blur(12px);
+            padding: 8px 26px;
+            border-radius: 60px;
+            font-size: 0.65rem;
+            letter-spacing: 3px;
+            color: var(--gold-light);
+            border: 1px solid rgba(184, 148, 60, 0.06);
+            margin-bottom: 14px;
+            text-transform: uppercase;
+            animation: pulseGlow 3s ease-in-out infinite;
+        }
+
+        .journey-final h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.2rem;
+            font-weight: 900;
+            line-height: 1.05;
+            margin-bottom: 16px;
+        }
+        .journey-final h2 span {
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            animation: glowPulse 4s ease-in-out infinite;
+        }
+
+        .journey-final .final-message {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 600px;
+            margin: 0 auto 30px;
+            line-height: 1.9;
+            font-weight: 300;
+        }
+
+        .journey-final .final-features {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        .journey-final .final-features span {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.03);
+            padding: 10px 26px;
+            border-radius: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            opacity: 0;
+            animation: slideUp 0.7s ease forwards;
+        }
+        .journey-final .final-features span:nth-child(1) { animation-delay: 0.4s; }
+        .journey-final .final-features span:nth-child(2) { animation-delay: 0.6s; }
+        .journey-final .final-features span:nth-child(3) { animation-delay: 0.8s; }
+        .journey-final .final-features span:nth-child(4) { animation-delay: 1.0s; }
+
+        .journey-final .final-features span:hover {
+            background: rgba(255, 255, 255, 0.06);
+            transform: translateY(-5px) scale(1.02);
+            border-color: rgba(184, 148, 60, 0.10);
+            box-shadow: 0 8px 45px rgba(184, 148, 60, 0.05);
+        }
+        .journey-final .final-features i {
+            color: var(--gold);
+            animation: heartbeat 2s ease-in-out infinite;
+        }
+
+        .journey-final .btn-primary {
+            box-shadow: 0 8px 50px rgba(184, 148, 60, 0.15);
+            animation: pulseGlow 3s ease-in-out infinite;
+        }
+        .journey-final .btn-primary:hover {
+            box-shadow: 0 12px 70px rgba(184, 148, 60, 0.25);
+        }
+
+        /* ============================================================
+           FRASE ENAMORADORA
+           ============================================================ */
+        .final-love-message {
+            margin-top: 35px;
+            padding: 20px 30px;
+            background: rgba(184, 148, 60, 0.08);
+            backdrop-filter: blur(16px);
+            border-radius: 60px;
+            border: 1px solid rgba(184, 148, 60, 0.08);
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+            animation: pulseGlow 3s ease-in-out infinite, slideUp 0.8s ease 1.2s forwards;
+            opacity: 0;
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 0 4px 40px rgba(184, 148, 60, 0.04);
+        }
+        .final-love-message:hover {
+            transform: scale(1.02) translateY(-3px);
+            background: rgba(184, 148, 60, 0.12);
+            border-color: rgba(184, 148, 60, 0.15);
+            box-shadow: 0 8px 60px rgba(184, 148, 60, 0.08);
+        }
+        .final-love-message .love-icon {
+            font-size: 1.6rem;
+            color: #e74c3c;
+            animation: heartbeat 1.2s ease-in-out infinite;
+            display: inline-block;
+        }
+        .final-love-message .love-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% 100%;
+            animation: shimmerText 4s ease-in-out infinite, gradientMove 6s ease-in-out infinite;
+            letter-spacing: 1px;
+        }
+        .final-love-message .love-text-small {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.50);
+            -webkit-text-fill-color: rgba(255, 255, 255, 0.50);
+            letter-spacing: 2px;
+        }
+        .final-love-message .sparkle-icon {
+            color: var(--gold-light);
+            font-size: 1rem;
+            animation: sparkle 3s ease-in-out infinite;
+        }
+
+        .final-stars {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .final-stars .star {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.10);
+            border-radius: 50%;
+            animation: twinkle 4s ease-in-out infinite;
+        }
+        .final-stars .star:nth-child(1) { top: 8%; left: 6%; animation-delay: 0s; width: 4px; height: 4px; }
+        .final-stars .star:nth-child(2) { top: 18%; right: 12%; animation-delay: 1.2s; }
+        .final-stars .star:nth-child(3) { top: 35%; left: 3%; animation-delay: 2.5s; width: 5px; height: 5px; }
+        .final-stars .star:nth-child(4) { top: 55%; right: 5%; animation-delay: 0.6s; }
+        .final-stars .star:nth-child(5) { top: 75%; left: 18%; animation-delay: 1.8s; width: 4px; height: 4px; }
+        .final-stars .star:nth-child(6) { top: 12%; right: 4%; animation-delay: 2.2s; }
+        .final-stars .star:nth-child(7) { top: 45%; left: 10%; animation-delay: 0.9s; width: 5px; height: 5px; }
+        .final-stars .star:nth-child(8) { top: 65%; right: 15%; animation-delay: 1.5s; }
+
+        /* ============================================================
+           WHATSAPP Y BACK TOP
+           ============================================================ */
+        .btn-whatsapp {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 999;
+            background: #25d366;
+            color: white;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 35px rgba(37, 211, 102, 0.15);
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            animation: pulseGlow 3s infinite;
+        }
+        .btn-whatsapp:hover {
+            transform: scale(1.10) rotate(-5deg);
+            box-shadow: 0 8px 55px rgba(37, 211, 102, 0.25);
+        }
+
+        .btn-back-top {
+            position: fixed;
+            bottom: 100px;
+            right: 28px;
+            z-index: 998;
+            background: rgba(255,255,255,0.03);
+            backdrop-filter: blur(16px);
+            color: var(--white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            border: 1px solid rgba(255,255,255,0.03);
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            cursor: pointer;
+        }
+        .btn-back-top.visible {
+            display: flex;
+            animation: bounceIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .btn-back-top:hover {
+            background: rgba(255,255,255,0.06);
+            transform: translateY(-5px) scale(1.05);
+            border-color: rgba(184,148,60,0.08);
+        }
+        .btn-back-top i {
+            color: var(--gold-light);
+        }
+
+        /* ============================================================
+           FOOTER
+           ============================================================ */
+        footer {
+            width: 100%;
+            overflow: hidden;
+            background: var(--dark);
+            position: relative;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr 1.2fr 1fr;
+            gap: 30px;
+            padding: 40px 0 30px;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+        }
+
+        .footer-col {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+        }
+
+        .footer-brand .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 2px;
+            line-height: 1.2;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% auto;
+            animation: shimmerText 4s ease-in-out infinite;
+        }
+        .footer-brand .brand-slogan {
+            font-size: 0.65rem;
+            color: #8a7a6a;
+            letter-spacing: 4px;
+            font-weight: 300;
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+
+        .footer-contact {
+            margin-top: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.78rem;
+            color: #b8a89a;
+            line-height: 1.4;
+            word-break: break-word;
+        }
+        .contact-item i {
+            color: var(--gold);
+            width: 14px;
+            font-size: 0.75rem;
+            flex-shrink: 0;
+            text-align: center;
+        }
+        .contact-item .email-small {
+            font-size: 0.68rem;
+            opacity: 0.85;
+        }
+
+        .footer-title {
+            color: var(--gold);
+            font-family: 'Playfair Display', serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+        .footer-title::after {
+            content: '';
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--gradient-gold);
+            opacity: 0.3;
+            margin-top: 4px;
+            border-radius: 2px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-links li a {
+            color: #b8a89a;
+            font-size: 0.78rem;
+            transition: 0.3s ease;
+            position: relative;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .footer-links li a::before {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            transition: 0.3s ease;
+            opacity: 0.3;
+        }
+        .footer-links li a:hover {
+            color: #ffffff;
+            padding-left: 4px;
+        }
+        .footer-links li a:hover::before {
+            width: 100%;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 4px;
+            flex-wrap: wrap;
+        }
+        .social-icons a {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.04);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8a7a6a;
+            transition: 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            font-size: 0.85rem;
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+        .social-icons a:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(196,154,60,0.04);
+            background: rgba(196,154,60,0.03);
+        }
+
+        .footer-bottom {
+            padding: 18px 0 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-commitment {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            padding: 12px 18px;
+            background: rgba(255,255,255,0.02);
+            border-radius: 12px;
+            border-left: 3px solid rgba(196,154,60,0.08);
+        }
+        .commitment-icon {
+            color: var(--gold);
+            font-size: 1rem;
+            opacity: 0.2;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        .footer-commitment p {
+            color: #b8a89a;
+            font-size: 0.78rem;
+            line-height: 1.6;
+            margin: 0;
+            font-weight: 300;
+        }
+        .footer-commitment p strong {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .footer-copy {
+            text-align: center;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255,255,255,0.02);
+        }
+        .footer-copy p {
+            color: #6a5a4a;
+            font-size: 0.68rem;
+            letter-spacing: 0.3px;
+            margin: 0;
+        }
+        .copy-brand {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .footer-landscape {
+            width: 100%;
+            height: 180px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(to bottom, var(--primary-dark), #1a120c);
+        }
+        .footer-landscape svg {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .footer-landscape .stars {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+        .footer-landscape .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 50%;
+            animation: twinkle 3s ease-in-out infinite;
+        }
+        .footer-landscape .star:nth-child(1) { top: 15%; left: 10%; animation-delay: 0s; }
+        .footer-landscape .star:nth-child(2) { top: 25%; left: 25%; animation-delay: 1s; }
+        .footer-landscape .star:nth-child(3) { top: 10%; left: 45%; animation-delay: 2s; }
+        .footer-landscape .star:nth-child(4) { top: 30%; left: 65%; animation-delay: 0.5s; }
+        .footer-landscape .star:nth-child(5) { top: 18%; left: 80%; animation-delay: 1.5s; }
+        .footer-landscape .star:nth-child(6) { top: 8%; left: 92%; animation-delay: 2.5s; }
+        .footer-landscape .star:nth-child(7) { top: 35%; left: 50%; animation-delay: 0.8s; }
+        .footer-landscape .star:nth-child(8) { top: 20%; left: 35%; animation-delay: 1.8s; }
+        .footer-landscape .star:nth-child(9) { top: 12%; left: 70%; animation-delay: 2.2s; }
+        .footer-landscape .star:nth-child(10) { top: 28%; left: 15%; animation-delay: 1.2s; }
+        .footer-landscape .star:nth-child(11) { top: 5%; left: 55%; animation-delay: 3s; }
+        .footer-landscape .star:nth-child(12) { top: 40%; left: 40%; animation-delay: 0.3s; }
+
+        /* ============================================================
+           RESPONSIVE
+           ============================================================ */
+        @media (max-width: 1024px) {
+            .hero-video h1 { font-size: 4rem; }
+            .plant-growth .section-header h2 { font-size: 2.4rem; }
+            .node-image { flex: 0 0 220px; height: 180px; }
+            .journey-final h2 { font-size: 3.2rem; }
+            .final-love-message .love-text { font-size: 1.2rem; }
+            .cursor { display: none; }
+            .growth-node:nth-child(odd).visible { animation: slideUp 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+            .growth-node:nth-child(even).visible { animation: slideUp 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+        }
+
+        @media (max-width: 768px) {
+            .navbar { padding: 12px 0; background: rgba(44, 31, 20, 0.15); }
+            .navbar.scrolled { background: rgba(44, 31, 20, 0.22); }
+            .nav-logo img { height: 42px; }
+            .nav-divider { height: 28px; }
+            .nav-title .line1 { font-size: 0.5rem; }
+            .nav-title .line2 { font-size: 0.4rem; }
+            .nav-title .line3 { font-size: 0.4rem; }
+            .nav-brand-wrapper { gap: 8px; max-width: 55%; }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 290px;
+                height: 100vh;
+                background: rgba(44,31,20,0.95);
+                backdrop-filter: blur(40px);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 24px;
+                transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+                box-shadow: -8px 0 70px rgba(0,0,0,0.4);
+            }
+            .nav-links.open { right: 0; }
+            .hamburger { display: flex; }
+
+            .hero-video { min-height: 90vh; padding: 100px 0 60px 0; }
+            .hero-video h1 { font-size: 2.8rem; }
+            .hero-video .hero-subtitle { font-size: 1.15rem; }
+            .hero-video .hero-description { font-size: 0.95rem; }
+            .hero-video .hero-badge { font-size: 0.6rem; padding: 8px 18px; margin-bottom: 20px; }
+
+            .plant-growth { padding: 50px 0 30px; }
+            .plant-growth .section-header h2 { font-size: 1.8rem; }
+
+            .growth-node {
+                flex-direction: column !important;
+                margin-bottom: 40px;
+                align-items: center;
+                text-align: center;
+            }
+            .growth-node.visible {
+                animation: slideUp 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) forwards !important;
+            }
+            .node-image { flex: 0 0 auto; width: 100%; max-width: 320px; height: 200px; }
+            .node-connector { flex: 0 0 40px; }
+            .node-connector .connector-circle { width: 40px; height: 40px; font-size: 0.75rem; }
+            .node-content { padding: 12px 0; }
+            .node-content h3 { font-size: 1.3rem; }
+            .node-content .node-tags { justify-content: center; }
+
+            .stem-line { display: none; }
+            .node-connector .connector-line { display: none; }
+
+            .journey-final { padding: 60px 0; }
+            .journey-final h2 { font-size: 2.6rem; }
+            .journey-final .final-message { font-size: 1rem; }
+            .journey-final .final-features { gap: 12px; flex-direction: column; align-items: center; }
+            .journey-final .final-icon { font-size: 3.8rem; }
+
+            .final-love-message {
+                padding: 14px 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+            .final-love-message .love-text { font-size: 1rem; }
+            .final-love-message .love-text-small { font-size: 0.7rem; }
+            .final-love-message .love-icon { font-size: 1.2rem; }
+
+            .btn-whatsapp { width: 48px; height: 48px; font-size: 1.5rem; bottom: 18px; right: 18px; }
+            .btn-back-top { width: 42px; height: 42px; font-size: 1rem; bottom: 82px; right: 18px; }
+            .cursor { display: none; }
+
+            .growth-node.final-node .node-content h3 { font-size: 1.5rem; }
+            .growth-node.final-node .node-content .final-message-highlight { font-size: 0.85rem; padding: 12px 16px; }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                padding: 26px 0 18px;
+            }
+            .footer-col { text-align: center; align-items: center; }
+            .footer-title::after { margin: 4px auto 0; }
+            .footer-contact { align-items: center; }
+            .contact-item { text-align: center; justify-content: center; }
+            .social-icons { justify-content: center; }
+            .footer-commitment { flex-direction: column; align-items: center; text-align: center; padding: 10px 14px; }
+            .footer-commitment p { text-align: center; }
+            .footer-brand { align-items: center; }
+            .footer-brand .brand-name { font-size: 1.2rem; }
+            .footer-brand .brand-slogan { font-size: 0.55rem; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-video { padding: 90px 0 40px 0; }
+            .hero-video h1 { font-size: 2.2rem; }
+            .hero-video .hero-subtitle { font-size: 0.95rem; }
+            .hero-video .hero-description { font-size: 0.85rem; }
+            .hero-video .hero-badge { font-size: 0.5rem; padding: 6px 14px; letter-spacing: 2px; margin-bottom: 16px; }
+
+            .plant-growth .section-header h2 { font-size: 1.5rem; }
+            .node-image { max-width: 100%; height: 170px; }
+            .node-content h3 { font-size: 1.1rem; }
+            .node-content p { font-size: 0.85rem; }
+            .node-content .node-tags span { font-size: 0.6rem; padding: 3px 12px; }
+
+            .journey-final h2 { font-size: 2rem; }
+            .journey-final .final-message { font-size: 0.9rem; }
+            .journey-final .final-features span { font-size: 0.75rem; padding: 6px 16px; }
+            .journey-final .final-icon { font-size: 3rem; }
+
+            .final-love-message {
+                padding: 10px 16px;
+                gap: 8px;
+                border-radius: 40px;
+            }
+            .final-love-message .love-text { font-size: 0.85rem; }
+            .final-love-message .love-text-small { font-size: 0.6rem; }
+            .final-love-message .love-icon { font-size: 1rem; }
+            .final-love-message .sparkle-icon { font-size: 0.8rem; }
+
+            .btn-primary, .btn-outline-light { padding: 12px 24px; font-size: 0.8rem; gap: 8px; }
+
+            .btn-whatsapp { width: 44px; height: 44px; font-size: 1.3rem; bottom: 14px; right: 14px; }
+            .btn-back-top { width: 38px; height: 38px; font-size: 0.9rem; bottom: 74px; right: 14px; }
+            .cursor { display: none; }
+
+            .footer-grid { grid-template-columns: 1fr; gap: 22px; padding: 20px 0 14px; }
+            .footer-brand .brand-name { font-size: 1rem; }
+            .footer-brand .brand-slogan { font-size: 0.5rem; letter-spacing: 2px; }
+            .contact-item { font-size: 0.7rem; }
+            .contact-item .email-small { font-size: 0.6rem; }
+            .footer-title { font-size: 0.8rem; margin-bottom: 10px; }
+            .footer-links li a { font-size: 0.72rem; }
+            .footer-commitment p { font-size: 0.7rem; }
+            .social-icons a { width: 34px; height: 34px; font-size: 0.8rem; }
+            .footer-copy p { font-size: 0.55rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================
+         CURSOR PERSONALIZADO
+         ============================================================ -->
+    <div class="cursor" id="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+    </div>
+
+    <!-- ============================================================
+         PRELOADER
+         ============================================================ -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-spinner"></div>
+            <div class="preloader-logo">CORPAPA</div>
+            <div class="preloader-sub">Coordinadora Rural de la Papa del Perú</div>
+            <div class="preloader-line"></div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         PROGRESS BAR
+         ============================================================ -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- ============================================================
+         NAVBAR
+         ============================================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand-wrapper">
+                <a href="index.html" class="nav-logo">
+                    <img src="imagenes/logo.png" alt="CORPAPA" />
+                </a>
+                <div class="nav-divider"></div>
+                <span class="nav-title">
+                    <span class="line1">COORDINADORA RURAL</span>
+                    <span class="line2">DE LA PAPA</span>
+                    <span class="line3">DEL PERÚ</span>
+                </span>
+            </div>
+           <ul class="nav-links" id="navLinks">
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                 <li><a href="proceso.html">Proceso</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html" class="btn-contact">Ubicanos</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================================
+         HERO CON VIDEO - ESPACIADO CORREGIDO
+         ============================================================ -->
+    <section class="hero-video" id="heroVideo">
+        <video autoplay muted loop playsinline>
+            <source src="imagenes/video.mp4" type="video/mp4" />
+            <img src="imagenes/uno.jpg" alt="CORPAPA" style="width:100%;height:100%;object-fit:cover;" />
+        </video>
+
+        <div class="hero-overlay"></div>
+
+        <div class="particles-container">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-play-circle"></i> El viaje de la papa nativa
+            </div>
+            <h1>Del corazón de los <span>Andes</span><br>a tu mesa</h1>
+            <div class="hero-subtitle">Descubre el proceso detrás de nuestras papas nativas</div>
+            <p class="hero-description">
+                Desde la selección de semillas hasta la comercialización, cada etapa del proceso es como el crecimiento de una planta.
+                Así como una semilla se convierte en una planta fuerte y productiva, nuestras papas nativas pasan por un
+                cuidado proceso que garantiza su calidad y sabor único.
+            </p>
+            <div class="hero-buttons">
+                <a href="#plantGrowth" class="btn-primary">
+                    <i class="fas fa-arrow-right"></i> Ver el proceso
+                </a>
+                <a href="productos.html" class="btn-outline-light">
+                    <i class="fas fa-seedling"></i> Nuestros productos
+                </a>
+            </div>
+        </div>
+
+        <div class="scroll-hint">
+            <span>Desplázate para explorar</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         PROCESO - CRECIMIENTO DE LA PLANTA
+         ============================================================ -->
+    <section class="plant-growth" id="plantGrowth">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge"><i class="fas fa-seedling"></i> El crecimiento de la papa</span>
+                <h2>De la <span class="highlight">semilla</span> a la <span class="highlight">cosecha</span></h2>
+                <p>Así como una planta crece paso a paso, nuestras papas nativas recorren un camino lleno de cuidado y tradición.</p>
+            </div>
+
+            <div class="leaf-deco"><i class="fas fa-leaf"></i></div>
+            <div class="leaf-deco"><i class="fas fa-leaf"></i></div>
+            <div class="leaf-deco"><i class="fas fa-leaf"></i></div>
+            <div class="leaf-deco"><i class="fas fa-leaf"></i></div>
+            <div class="leaf-deco"><i class="fas fa-leaf"></i></div>
+            <div class="leaf-deco"><i class="fas fa-leaf"></i></div>
+            <div class="leaf-deco"><i class="fas fa-leaf"></i></div>
+            <div class="leaf-deco"><i class="fas fa-leaf"></i></div>
+
+            <div class="plant-stem">
+                <div class="stem-line"></div>
+
+                <!-- PASO 01 -->
+                <div class="growth-node" data-delay="100">
+                    <div class="node-image" data-image="imagenes/PROCESO/ESCOGER.PNG">
+                        <img src="imagenes/PROCESO/ESCOGER.PNG" alt="Selección de Semillas" />
+                        <span class="image-badge">PASO 01</span>
+                        <div class="image-icon"><i class="fas fa-seedling"></i></div>
+                    </div>
+                    <div class="node-connector">
+                        <div class="connector-circle">01</div>
+                        <div class="connector-line"></div>
+                    </div>
+                    <div class="node-content">
+                        <span class="node-step">Paso 01</span>
+                        <span class="node-subtitle">El origen de todo</span>
+                        <h3>Selección de Semillas</h3>
+                        <p>Cada papa nativa comienza con una semilla elegida con esmero. Nuestros productores seleccionan variedades ancestrales, conservando la biodiversidad y el legado de generaciones. Semillas sanas, fuertes y llenas de historia.</p>
+                        <div class="node-tags">
+                            <span>Variedades nativas</span>
+                            <span>Biodiversidad</span>
+                            <span>Legado generacional</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PASO 02 -->
+                <div class="growth-node" data-delay="200">
+                    <div class="node-image" data-image="imagenes/PROCESO/PREPARARTIE.PNG">
+                        <img src="imagenes/PROCESO/PREPARARTIE.PNG" alt="Preparación del Terreno" />
+                        <span class="image-badge">PASO 02</span>
+                        <div class="image-icon"><i class="fas fa-tractor"></i></div>
+                    </div>
+                    <div class="node-connector">
+                        <div class="connector-circle">02</div>
+                        <div class="connector-line"></div>
+                    </div>
+                    <div class="node-content">
+                        <span class="node-step">Paso 02</span>
+                        <span class="node-subtitle">La tierra nos abraza</span>
+                        <h3>Preparación del Terreno</h3>
+                        <p>Los suelos andinos son preparados con técnicas tradicionales y sostenibles. Respetamos los ciclos naturales, cuidamos la fertilidad del suelo y honramos la tierra que nos da vida.</p>
+                        <div class="node-tags">
+                            <span>Conocimientos ancestrales</span>
+                            <span>Ciclos naturales</span>
+                            <span>Suelos andinos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PASO 03 -->
+                <div class="growth-node" data-delay="300">
+                    <div class="node-image" data-image="imagenes/PROCESO/SEMBRAR.PNG">
+                        <img src="imagenes/PROCESO/SEMBRAR.PNG" alt="Siembra" />
+                        <span class="image-badge">PASO 03</span>
+                        <div class="image-icon"><i class="fas fa-hand-holding-seedling"></i></div>
+                    </div>
+                    <div class="node-connector">
+                        <div class="connector-circle">03</div>
+                        <div class="connector-line"></div>
+                    </div>
+                    <div class="node-content">
+                        <span class="node-step">Paso 03</span>
+                        <span class="node-subtitle">Donde el cielo toca la tierra</span>
+                        <h3>Siembra en las Alturas</h3>
+                        <p>Entre los 3,000 y 4,200 metros sobre el nivel del mar, nuestras manos campesinas siembran la esperanza. El clima andino, el sol y el agua de los manantiales dan vida a cada planta.</p>
+                        <div class="node-tags">
+                            <span>3,000-4,200 m.s.n.m.</span>
+                            <span>Clima andino</span>
+                            <span>Suelos fértiles</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PASO 04 -->
+                <div class="growth-node" data-delay="400">
+                    <div class="node-image" data-image="imagenes/PROCESO/APORQUE.jpg">
+                        <img src="imagenes/PROCESO/APORQUE.jpg" alt="Desarrollo del Cultivo" />
+                        <span class="image-badge">PASO 04</span>
+                        <div class="image-icon"><i class="fas fa-water"></i></div>
+                    </div>
+                    <div class="node-connector">
+                        <div class="connector-circle">04</div>
+                        <div class="connector-line"></div>
+                    </div>
+                    <div class="node-content">
+                        <span class="node-step">Paso 04</span>
+                        <span class="node-subtitle">Cada día, un acto de dedicación</span>
+                        <h3>Cuidado y Desarrollo del Cultivo</h3>
+                        <p>Riego, deshierbe, aporque y fertilización natural. Nuestros agricultores acompañan el crecimiento de cada planta con dedicación, como quien cuida un tesoro. La papa crece fuerte y saludable.</p>
+                        <div class="node-tags">
+                            <span>Cuidado constante</span>
+                            <span>Biodiversidad</span>
+                            <span>Equilibrio natural</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PASO 05 -->
+                <div class="growth-node" data-delay="500">
+                    <div class="node-image" data-image="imagenes/PROCESO/MONITOREO.PNG">
+                        <img src="imagenes/PROCESO/MONITOREO.PNG" alt="Control Fitosanitario" />
+                        <span class="image-badge">PASO 05</span>
+                        <div class="image-icon"><i class="fas fa-shield-alt"></i></div>
+                    </div>
+                    <div class="node-connector">
+                        <div class="connector-circle">05</div>
+                        <div class="connector-line"></div>
+                    </div>
+                    <div class="node-content">
+                        <span class="node-step">Paso 05</span>
+                        <span class="node-subtitle">Defendemos lo que amamos</span>
+                        <h3>Protección Natural</h3>
+                        <p>Monitoreo constante con prácticas agroecológicas. Prevenimos plagas y enfermedades sin dañar el equilibrio natural. Nuestra filosofía: cuidar la tierra como ella nos cuida a nosotros.</p>
+                        <div class="node-tags">
+                            <span>Prevención</span>
+                            <span>Agroecología</span>
+                            <span>Sostenibilidad</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PASO 06 -->
+                <div class="growth-node" data-delay="600">
+                    <div class="node-image" data-image="imagenes/PROCESO/COSECHA.PNG">
+                        <img src="imagenes/PROCESO/COSECHA.PNG" alt="Cosecha" />
+                        <span class="image-badge">PASO 06</span>
+                        <div class="image-icon"><i class="fas fa-utensils"></i></div>
+                    </div>
+                    <div class="node-connector">
+                        <div class="connector-circle">06</div>
+                        <div class="connector-line"></div>
+                    </div>
+                    <div class="node-content">
+                        <span class="node-step">Paso 06</span>
+                        <span class="node-subtitle">El fruto del esfuerzo</span>
+                        <h3>Cosecha con Tradición</h3>
+                        <p>Cuando la papa está lista, la cosecha se realiza con técnicas que respetan cada tubérculo. Es el momento más esperado: el resultado de meses de trabajo, amor y paciencia.</p>
+                        <div class="node-tags">
+                            <span>Esfuerzo familiar</span>
+                            <span>Tradición andina</span>
+                            <span>Dedicación</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PASO 07 -->
+                <div class="growth-node" data-delay="700">
+                    <div class="node-image" data-image="imagenes/PROCESO/ALMA.PNG">
+                        <img src="imagenes/PROCESO/ALMA.PNG" alt="Selección y Empaque" />
+                        <span class="image-badge">PASO 07</span>
+                        <div class="image-icon"><i class="fas fa-boxes"></i></div>
+                    </div>
+                    <div class="node-connector">
+                        <div class="connector-circle">07</div>
+                        <div class="connector-line"></div>
+                    </div>
+                    <div class="node-content">
+                        <span class="node-step">Paso 07</span>
+                        <span class="node-subtitle">La perfección en cada detalle</span>
+                        <h3>Selección y Empaque</h3>
+                        <p>Cada papa es inspeccionada, clasificada por variedad, tamaño y calidad. Luego empacada con esmero para conservar su frescura y sabor. Un producto premium que refleja nuestro compromiso.</p>
+                        <div class="node-tags">
+                            <span>Clasificación por calidad</span>
+                            <span>Empaque premium</span>
+                            <span>Estándares internacionales</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PASO 08 -->
+                <div class="growth-node" data-delay="800">
+                    <div class="node-image" data-image="imagenes/PROCESO/ALMACENA.PNG">
+                        <img src="imagenes/PROCESO/ALMACENA.PNG" alt="Almacenamiento y Distribución" />
+                        <span class="image-badge">PASO 08</span>
+                        <div class="image-icon"><i class="fas fa-truck"></i></div>
+                    </div>
+                    <div class="node-connector">
+                        <div class="connector-circle">08</div>
+                        <div class="connector-line"></div>
+                    </div>
+                    <div class="node-content">
+                        <span class="node-step">Paso 08</span>
+                        <span class="node-subtitle">Llevamos el sabor de los Andes</span>
+                        <h3>Almacenamiento y Distribución</h3>
+                        <p>Condiciones óptimas de almacenamiento para mantener la calidad. Distribución eficiente y segura hacia mercados, supermercados, restaurantes y clientes en todo el país. La papa nativa viaja para conquistar paladares.</p>
+                        <div class="node-tags">
+                            <span>Mercados globales</span>
+                            <span>Distribución segura</span>
+                            <span>Desarrollo económico</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PASO 09 -->
+                <div class="growth-node final-node" data-delay="900">
+                    <div class="node-image" data-image="imagenes/PROCESO/PAPABOLSAS.PNG">
+                        <img src="imagenes/PROCESO/PAPABOLSAS.PNG"" alt="Comercialización y Atención al Cliente" />
+                        <span class="image-badge"><i class="fas fa-star"></i> PASO 09</span>
+                        <div class="image-icon"><i class="fas fa-handshake" style="color:var(--gold-light);"></i></div>
+                    </div>
+                    <div class="node-connector">
+                        <div class="connector-circle"><i class="fas fa-star"></i></div>
+                        <div class="connector-line"></div>
+                    </div>
+                    <div class="node-content">
+                        <span class="node-step"><i class="fas fa-flag"></i> Paso 09</span>
+                        <span class="node-subtitle">El corazón que brilla</span>
+                        <h3>Comercialización y Atención al Cliente</h3>
+
+                        <p>
+                            <span class="step-9-highlight"><i class="fas fa-gem"></i> El momento donde la historia de nuestra papa llega a ti</span>
+                        </p>
+
+                        <p>
+                            No vendemos papas, <strong style="color:var(--gold-dark);">compartimos historias, tradiciones y el amor de familias campesinas</strong>.
+                            CORPAPA no es solo un producto: es un puente entre los Andes y tu mesa.
+                        </p>
+
+                        <p class="final-quote">
+                            <i class="fas fa-quote-left"></i>
+                            ¿Qué hace que esta etapa sea inolvidable?
+                            <i class="fas fa-quote-right"></i>
+                        </p>
+
+                        <div class="node-tags">
+                            <span><i class="fas fa-check-circle" style="color:var(--gold);"></i> Calidad garantizada</span>
+                            <span><i class="fas fa-handshake" style="color:var(--gold);"></i> Comercio justo</span>
+                            <span><i class="fas fa-headset" style="color:var(--gold);"></i> Atención personalizada</span>
+                            <span><i class="fas fa-clock" style="color:var(--gold);"></i> Entrega puntual</span>
+                            <span><i class="fas fa-leaf" style="color:var(--gold);"></i> Sostenibilidad</span>
+                            <span><i class="fas fa-users" style="color:var(--gold);"></i> Familias campesinas</span>
+                        </div>
+
+                        <div class="final-message-highlight">
+                            <strong><i class="fas fa-star" style="color:var(--gold);"></i> Porque cuando eliges CORPAPA, no solo compras papa:</strong>
+                            abrazas una cultura, apoyas un sueño y te enamoras del sabor auténtico del Perú.
+                            <span style="display:block;margin-top:6px;color:var(--gold);font-weight:600;">
+                                <i class="fas fa-heart" style="color:#e74c3c;"></i> El sabor que conecta el campo con tu hogar
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         PANTALLA FINAL - JOURNEY
+         ============================================================ -->
+    <section class="journey-final" id="journeyFinal">
+        <div class="final-stars">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+        </div>
+
+        <div class="final-content">
+            <div class="final-icon"><i class="fas fa-mountain"></i></div>
+            <div class="final-badge"><i class="fas fa-seedling"></i> El viaje continúa</div>
+            <h2>El <span>sabor</span> que conecta<br>el campo con tu <span>hogar</span></h2>
+            <p class="final-message">
+                Detrás de cada papa nativa hay una historia de esfuerzo, amor y tradición.
+                En CORPAPA, transformamos cada paso en un momento único.
+                Porque no solo llevamos papas a tu mesa, llevamos el corazón de los Andes.
+            </p>
+
+            <div class="final-features">
+                <span><i class="fas fa-leaf"></i> 100% Papas Nativas</span>
+                <span><i class="fas fa-hand-holding-heart"></i> Comercio Justo</span>
+                <span><i class="fas fa-users"></i> Familias Campesinas</span>
+                <span><i class="fas fa-star"></i> Calidad Premium</span>
+            </div>
+
+            <a href="productos.html" class="btn-primary">
+                <i class="fas fa-shopping-bag"></i> Descubre nuestros productos
+            </a>
+
+            <div class="final-love-message">
+                <span class="love-icon"><i class="fas fa-heart"></i></span>
+                <span class="love-text">Hecho con amor desde los Andes</span>
+                <span class="love-text-small">— CORPAPA</span>
+                <span class="sparkle-icon"><i class="fas fa-star"></i></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         MODAL PARA AMPLIAR IMÁGENES
+         ============================================================ -->
+    <div class="image-modal" id="imageModal">
+        <span class="modal-close" id="modalClose"><i class="fas fa-times"></i></span>
+        <span class="modal-nav prev" id="modalPrev"><i class="fas fa-chevron-left"></i></span>
+        <span class="modal-nav next" id="modalNext"><i class="fas fa-chevron-right"></i></span>
+        <img id="modalImage" src="" alt="Ampliar imagen" />
+        <span class="modal-counter" id="modalCounter"></span>
+    </div>
+
+    <!-- ============================================================
+         WHATSAPP
+         ============================================================ -->
+    <a href="#" class="btn-whatsapp" id="whatsappBtn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ============================================================
+         BACK TO TOP
+         ============================================================ -->
+    <button class="btn-back-top" id="backTopBtn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-brand">
+                        <div class="brand-name">COR<span>PAPA</span></div>
+                        <span class="brand-slogan">Coordinadora Rural de la Papa del Perú</span>
+                    </div>
+                    <div class="footer-contact">
+                        <div class="contact-item"><i class="fas fa-phone"></i><span>(+51) 943 247 000</span></div>
+                        <div class="contact-item"><i class="fas fa-phone"></i><span>(+51) 918 031 109</span></div>
+                        <div class="contact-item"><i class="fas fa-phone"></i><span>(+51) 066 637 909</span></div>
+                        <div class="contact-item"><i class="fas fa-envelope"></i><span>corpapaayacucho@gmail.com</span></div>
+                        <div class="contact-item"><i class="fas fa-envelope"></i><span class="email-small">administracioncorpapa@papasandinas.com</span></div>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Enlaces rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="proceso.html">Proceso Productivo</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Nuestros productos</h4>
+                    <ul class="footer-links">
+                        <li><a href="productos.html#nativas">Papas Nativas</a></li>
+                        <li><a href="productos.html#tradicionales">Papas Tradicionales</a></li>
+                        <li><a href="productos.html#organicos">Papas Orgánicas</a></li>
+                        <li><a href="productos.html">Ver todas las variedades</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Síguenos</h4>
+                    <div class="social-icons">
+                        <a href="https://web.facebook.com/corpapape" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/corpapaperu/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-commitment">
+                    <span class="commitment-icon">◆</span>
+                    <p><strong>Nuestro Compromiso:</strong> Trabajamos junto a las familias agricultoras para conservar la biodiversidad de las papas nativas del Perú, fortaleciendo la agricultura familiar, promoviendo el comercio justo y llevando productos de alta calidad desde los Andes hasta la mesa de nuestros consumidores.</p>
+                </div>
+                <div class="footer-copy">
+                    <p>&copy; 2026 <span class="copy-brand">CORPAPA</span> — Coordinadora Rural de la Papa del Perú. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+         SCRIPTS
+         ============================================================ -->
+    <script>
+        (function() {
+            const cursor = document.getElementById('cursor');
+            if (!cursor) return;
+
+            document.addEventListener('mousemove', function(e) {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+
+            document.querySelectorAll('a, button, .btn-primary, .btn-outline-light, .growth-node, .node-image, .final-features span, .final-love-message').forEach(function(el) {
+                el.addEventListener('mouseenter', function() {
+                    cursor.classList.add('hover');
+                    if (el.tagName === 'BUTTON' || el.classList.contains('btn-primary') ||
+                        el.classList.contains('btn-outline-light')) {
+                        cursor.classList.add('hover-btn');
+                    }
+                });
+                el.addEventListener('mouseleave', function() {
+                    cursor.classList.remove('hover', 'hover-btn');
+                });
+            });
+        })();
+
+        (function() {
+            window.addEventListener('load', function() {
+                const preloader = document.getElementById('preloader');
+                preloader.classList.add('hidden');
+                setTimeout(function() { preloader.style.display = 'none'; }, 1200);
+            });
+        })();
+
+        (function() {
+            const progress = document.getElementById('progressBar');
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                progress.style.width = (scrollTop / docHeight * 100) + '%';
+            });
+        })();
+
+        (function() {
+            const navbar = document.getElementById('navbar');
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+            let lastScroll = 0;
+            let ticking = false;
+
+            window.addEventListener('scroll', function() {
+                const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (!ticking) {
+                    window.requestAnimationFrame(function() {
+                        if (currentScroll > 80) {
+                            navbar.classList.add('scrolled');
+                            if (currentScroll > lastScroll && currentScroll > 150) {
+                                navbar.classList.add('hidden');
+                            } else {
+                                navbar.classList.remove('hidden');
+                            }
+                        } else {
+                            navbar.classList.remove('scrolled');
+                            navbar.classList.remove('hidden');
+                        }
+                        lastScroll = currentScroll;
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+
+            if (hamburger) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    navLinks.classList.toggle('open');
+                });
+            }
+
+            document.querySelectorAll('.nav-links a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    if (hamburger) hamburger.classList.remove('active');
+                    if (navLinks) navLinks.classList.remove('open');
+                    navbar.classList.remove('hidden');
+                });
+            });
+        })();
+
+        (function() {
+            const nodes = document.querySelectorAll('.growth-node');
+
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            const delay = parseInt(entry.target.getAttribute('data-delay')) || 0;
+                            setTimeout(function() {
+                                entry.target.classList.add('visible');
+                            }, delay);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.15, rootMargin: '0px 0px -20px 0px' });
+
+                nodes.forEach(function(node) {
+                    observer.observe(node);
+                });
+            } else {
+                nodes.forEach(function(node) {
+                    node.classList.add('visible');
+                });
+            }
+        })();
+
+        (function() {
+            const btn = document.getElementById('backTopBtn');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+            btn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        })();
+
+        (function() {
+            const btn = document.getElementById('whatsappBtn');
+            setInterval(function() {
+                btn.style.transform = 'scale(1.08)';
+                setTimeout(function() { btn.style.transform = 'scale(1)'; }, 300);
+            }, 4000);
+        })();
+
+        (function() {
+            document.querySelectorAll('.btn-primary, .btn-outline-light').forEach(function(btn) {
+                btn.addEventListener('click', function(e) {
+                    const rect = this.getBoundingClientRect();
+                    const ripple = document.createElement('span');
+                    ripple.className = 'ripple';
+                    const size = Math.max(rect.width, rect.height);
+                    ripple.style.width = ripple.style.height = size + 'px';
+                    ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+                    ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+                    this.appendChild(ripple);
+                    setTimeout(function() { ripple.remove(); }, 700);
+                });
+            });
+        })();
+
+        // ============================================================
+        // MODAL PARA AMPLIAR IMÁGENES DEL PROCESO
+        // ============================================================
+        (function() {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const modalClose = document.getElementById('modalClose');
+            const modalPrev = document.getElementById('modalPrev');
+            const modalNext = document.getElementById('modalNext');
+            const modalCounter = document.getElementById('modalCounter');
+
+            // Obtener todas las imágenes de los nodos que tienen data-image
+            const images = document.querySelectorAll('.node-image');
+            let currentIndex = 0;
+
+            function openModal(index) {
+                if (index < 0) index = images.length - 1;
+                if (index >= images.length) index = 0;
+                currentIndex = index;
+                const img = images[currentIndex];
+                const src = img.getAttribute('data-image') || img.querySelector('img').src;
+                modalImg.src = src;
+                modalImg.alt = img.querySelector('img').alt || 'Imagen del proceso';
+                modalCounter.textContent = (currentIndex + 1) + ' / ' + images.length;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModal() {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            images.forEach(function(img, index) {
+                img.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    openModal(index);
+                });
+            });
+
+            modalClose.addEventListener('click', closeModal);
+
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (!modal.classList.contains('active')) return;
+                if (e.key === 'Escape') closeModal();
+                if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    openModal(currentIndex - 1);
+                }
+                if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    openModal(currentIndex + 1);
+                }
+            });
+
+            modalPrev.addEventListener('click', function(e) {
+                e.stopPropagation();
+                openModal(currentIndex - 1);
+            });
+
+            modalNext.addEventListener('click', function(e) {
+                e.stopPropagation();
+                openModal(currentIndex + 1);
+            });
+
+            // Soporte táctil para móviles (swipe)
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            modal.addEventListener('touchstart', function(e) {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            modal.addEventListener('touchend', function(e) {
+                touchEndX = e.changedTouches[0].screenX;
+                const diff = touchStartX - touchEndX;
+                if (Math.abs(diff) > 50) {
+                    if (diff > 0) {
+                        openModal(currentIndex + 1);
+                    } else {
+                        openModal(currentIndex - 1);
+                    }
+                }
+            }, { passive: true });
+        })();
+
+        console.log('%c CORPAPA - El Viaje de la Papa Nativa', 'color:#b8943c;font-size:20px;font-weight:bold;');
+        console.log('%c 9 pasos con un diseño profesional y refinado', 'color:#d4b87a;font-size:14px;');
+        console.log('%c Paso 09 mejorado: Comercialización y Atención al Cliente', 'color:#b8943c;font-size:15px;font-weight:bold;');
+        console.log('%c Pantalla final profesional con frase enamoradora', 'color:#d4b87a;font-size:14px;');
+        console.log('%c CORPAPA - El sabor que conecta el campo con tu hogar', 'color:#b8943c;font-size:16px;font-weight:bold;');
+    </script>
+</body>
+</html>

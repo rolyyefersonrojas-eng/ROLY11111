@@ -1,0 +1,2485 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>Nosotros – CORPAPA | Coordinadora Rural de la Papa del Perú</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
+    <style>
+        /* ============================================================
+           CORPAPA - NOSOTROS PREMIUM CON IMÁGENES COMPLETAS
+           ============================================================ */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #3d2b1a;
+            --primary-dark: #2c1f14;
+            --primary-light: #5a4030;
+            --gold: #b8943c;
+            --gold-light: #d4b87a;
+            --gold-dark: #8a6f2a;
+            --gold-pale: rgba(184, 148, 60, 0.06);
+            --cream: #f7f2eb;
+            --cream-dark: #ece4da;
+            --white: #ffffff;
+            --dark: #1f1610;
+            --text: #2d221a;
+            --text-light: #6a5a4a;
+            --text-muted: #9a8a7a;
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+            --shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.08);
+            --shadow-premium: 0 40px 100px rgba(0, 0, 0, 0.05);
+            --transition: 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --transition-bounce: 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+            --gradient-gold: linear-gradient(135deg, #b8943c 0%, #d4b87a 45%, #a07d30 100%);
+            --gradient-gold-soft: linear-gradient(135deg, rgba(184, 148, 60, 0.05) 0%, rgba(212, 184, 122, 0.02) 100%);
+            --gradient-dark: linear-gradient(160deg, #2c1f14 0%, #1f1610 100%);
+        }
+
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            color: var(--text);
+            background: var(--cream);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        a { text-decoration: none; color: inherit; }
+        ::selection { background: var(--gold); color: var(--white); }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: var(--cream); }
+        ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
+
+        /* ============================================================
+           ANIMACIONES
+           ============================================================ */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInBlur {
+            from { opacity: 0; filter: blur(10px); transform: scale(1.02); }
+            to { opacity: 1; filter: blur(0); transform: scale(1); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+        }
+        @keyframes shimmerText {
+            0% { background-position: -300% center; }
+            100% { background-position: 300% center; }
+        }
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.92); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes counterBounce {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+            100% { transform: scale(1); }
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.08; }
+            50% { opacity: 0.3; }
+        }
+        @keyframes pulseRing {
+            0% { transform: scale(1); opacity: 0.6; }
+            100% { transform: scale(1.8); opacity: 0; }
+        }
+        @keyframes rotateGlow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes floatParticle {
+            0%, 100% { transform: translateY(0) translateX(0); opacity: 0; }
+            25% { opacity: 0.3; }
+            50% { transform: translateY(-30px) translateX(10px); opacity: 0.6; }
+            75% { opacity: 0.3; }
+        }
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0.5) rotate(0deg); }
+            50% { opacity: 1; transform: scale(1.2) rotate(180deg); }
+        }
+        @keyframes kenBurns {
+            0% { transform: scale(1) translateX(0); }
+            100% { transform: scale(1.06) translateX(-2%); }
+        }
+        @keyframes cardImageZoom {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.08); }
+        }
+
+        /* ============================================================
+           CURSOR
+           ============================================================ */
+        .cursor {
+            position: fixed;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 1.5px solid rgba(184, 148, 60, 0.12);
+            pointer-events: none;
+            z-index: 99999;
+            transition: width 0.4s ease, height 0.4s ease, border-color 0.3s ease, background 0.4s ease;
+            transform: translate(-50%, -50%);
+            background: rgba(184, 148, 60, 0.02);
+            backdrop-filter: blur(2px);
+        }
+        .cursor .glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--gold);
+            box-shadow: 0 0 25px rgba(184, 148, 60, 0.12);
+            transition: all 0.3s ease;
+        }
+        .cursor.hover { width: 56px; height: 56px; border-color: var(--gold); background: rgba(184, 148, 60, 0.04); }
+        .cursor.hover .glow { width: 8px; height: 8px; box-shadow: 0 0 40px rgba(184, 148, 60, 0.18); }
+        @media (max-width: 1024px) { .cursor { display: none; } }
+
+        /* ============================================================
+           PRELOADER
+           ============================================================ */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 99999;
+            transition: opacity 1s ease, visibility 1s ease;
+        }
+        .preloader.hidden { opacity: 0; visibility: hidden; }
+        .preloader .preloader-content { text-align: center; position: relative; }
+        .preloader .preloader-logo {
+            font-family: 'Playfair Display', serif;
+            color: var(--gold-light);
+            font-size: 3.6rem;
+            letter-spacing: 16px;
+            opacity: 0;
+            animation: fadeInBlur 1.2s ease 0.3s forwards;
+        }
+        .preloader .preloader-sub {
+            color: rgba(255,255,255,0.2);
+            font-size: 0.75rem;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            margin-top: 8px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 1s forwards;
+        }
+        .preloader .preloader-line {
+            width: 0;
+            height: 2px;
+            background: var(--gradient-gold);
+            margin: 16px auto 0;
+            border-radius: 4px;
+            animation: preloaderLine 1.8s ease 0.5s forwards;
+        }
+        @keyframes preloaderLine { 0% { width: 0; } 100% { width: 150px; } }
+        .preloader .preloader-spinner {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 75px;
+            height: 75px;
+            border: 1.5px solid rgba(184,148,60,0.05);
+            border-top: 1.5px solid var(--gold);
+            border-radius: 50%;
+            animation: spin 1.2s linear infinite;
+            opacity: 0;
+            animation: spin 1.2s linear infinite, fadeInUp 0.5s ease 0.2s forwards;
+        }
+        @keyframes spin { 0% { transform: translateX(-50%) rotate(0deg); } 100% { transform: translateX(-50%) rotate(360deg); } }
+
+        /* ============================================================
+           PROGRESS BAR
+           ============================================================ */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2.5px;
+            background: var(--gradient-gold);
+            z-index: 10000;
+            width: 0%;
+            transition: width 0.1s ease;
+            box-shadow: 0 0 25px rgba(184,148,60,0.08);
+        }
+
+        /* ============================================================
+           NAVBAR
+           ============================================================ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 16px 0;
+            transition: transform 0.5s ease, background 0.5s ease, backdrop-filter 0.5s ease, box-shadow 0.5s ease, padding 0.4s ease;
+            background: rgba(44, 31, 20, 0.06);
+            backdrop-filter: blur(12px) saturate(1.2);
+            -webkit-backdrop-filter: blur(12px) saturate(1.2);
+            transform: translateY(0);
+            opacity: 0;
+            animation: fadeInDown 0.8s ease 1.6s forwards;
+            border-bottom: 1px solid rgba(255,255,255,0.02);
+        }
+        .navbar.hidden-nav { transform: translateY(-110%); opacity: 0; }
+        .navbar.visible-nav { transform: translateY(0); opacity: 1; }
+        .navbar.scrolled {
+            background: rgba(44, 31, 20, 0.80);
+            backdrop-filter: blur(20px) saturate(1.3);
+            -webkit-backdrop-filter: blur(20px) saturate(1.3);
+            padding: 10px 0;
+            box-shadow: 0 4px 40px rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.02);
+        }
+        .navbar .container { display: flex; justify-content: space-between; align-items: center; }
+        .nav-brand-wrapper { display: flex; align-items: center; gap: 14px; }
+        .nav-logo img {
+            height: 55px;
+            width: auto;
+            filter: drop-shadow(0 0 25px rgba(184, 148, 60, 0.03));
+            transition: var(--transition-bounce);
+        }
+        .nav-logo img:hover { transform: scale(1.04) rotate(-1deg); filter: drop-shadow(0 0 40px rgba(184, 148, 60, 0.08)); }
+        .nav-divider { width: 1px; height: 38px; background: rgba(255,255,255,0.04); flex-shrink: 0; }
+        .nav-title {
+            font-family: 'Montserrat', 'Inter', sans-serif;
+            font-weight: 700;
+            color: #ffffff;
+            font-size: 0.55rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            line-height: 1.2;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(120deg, #ffffff 0%, #ffffff 35%, #f0e6c0 45%, #ffffff 55%, #ffffff 100%);
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmerText 5s ease-in-out infinite;
+        }
+        .nav-title .line1 { font-size: 0.75rem; }
+        .nav-title .line2 { font-size: 0.65rem; }
+        .nav-title .line3 { font-size: 0.6rem; }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 500;
+            font-size: 0.78rem;
+            transition: all 0.4s ease;
+            position: relative;
+            letter-spacing: 0.3px;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 1.5px;
+            background: var(--gradient-gold);
+            transition: width 0.4s ease;
+            border-radius: 2px;
+        }
+        .nav-links a:hover { color: var(--white); }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-links a.active { color: var(--white); }
+        .nav-links a.active::after { width: 100%; }
+        .nav-links .btn-contact {
+            background: var(--gradient-gold);
+            color: var(--dark);
+            padding: 7px 26px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.7rem;
+            transition: var(--transition-bounce);
+            box-shadow: 0 4px 20px rgba(184, 148, 60, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        .nav-links .btn-contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shimmer 5s infinite;
+        }
+        .nav-links .btn-contact:hover { transform: scale(1.04) translateY(-2px); box-shadow: 0 8px 30px rgba(184, 148, 60, 0.12); }
+        .nav-links .btn-contact::after { display: none; }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+            z-index: 1001;
+            padding: 4px;
+        }
+        .hamburger span { width: 24px; height: 2px; background: var(--white); border-radius: 4px; transition: var(--transition); }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+        /* ============================================================
+           SECCIONES COMUNES
+           ============================================================ */
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 0.6rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+        .section-badge::before {
+            content: '';
+            width: 24px;
+            height: 1.5px;
+            background: var(--gradient-gold);
+            opacity: 0.2;
+            margin-right: 6px;
+            border-radius: 2px;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+            line-height: 1.12;
+        }
+        .section-title .highlight {
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% auto;
+            animation: shimmerText 4s ease-in-out infinite;
+        }
+        .section-subtitle {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            max-width: 580px;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+        .text-center { text-align: center; }
+        .text-center .section-subtitle { margin-left: auto; margin-right: auto; }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.9s ease, transform 0.9s ease;
+        }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+        .slide-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.9s ease, transform 0.9s ease;
+        }
+        .slide-left.visible { opacity: 1; transform: translateX(0); }
+        .slide-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.9s ease, transform 0.9s ease;
+        }
+        .slide-right.visible { opacity: 1; transform: translateX(0); }
+
+        /* ============================================================
+           BOTONES
+           ============================================================ */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--gradient-gold);
+            color: var(--dark);
+            padding: 14px 40px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 6px 30px rgba(184, 148, 60, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+            animation: shimmer 5s infinite;
+        }
+        .btn-primary:hover { transform: translateY(-4px) scale(1.02); box-shadow: 0 12px 45px rgba(184, 148, 60, 0.15); }
+
+        .btn-cta-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            color: var(--white);
+            padding: 14px 40px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border: 1px solid rgba(255,255,255,0.06);
+            cursor: pointer;
+        }
+        .btn-cta-outline:hover {
+            background: rgba(255,255,255,0.03);
+            transform: translateY(-4px);
+            border-color: rgba(255,255,255,0.12);
+            color: var(--gold-light);
+        }
+
+        /* ============================================================
+           HERO
+           ============================================================ */
+        .about-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: var(--white);
+            overflow: hidden;
+            padding: 120px 0 80px;
+        }
+        .about-hero .hero-bg {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            background-image: url('imagenes/portada.png');
+            animation: kenBurns 25s ease-in-out infinite alternate;
+            z-index: 0;
+        }
+        .about-hero .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(160deg, rgba(44,31,20,0.7) 0%, rgba(30,22,16,0.5) 50%, rgba(44,31,20,0.6) 100%);
+            z-index: 1;
+        }
+        .about-hero .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 850px;
+            padding: 40px 0;
+        }
+        .about-hero .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255,255,255,0.03);
+            backdrop-filter: blur(10px);
+            padding: 8px 24px;
+            border-radius: 60px;
+            font-size: 0.6rem;
+            letter-spacing: 4px;
+            color: var(--gold-light);
+            border: 1px solid rgba(255,255,255,0.02);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: 500;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.8s forwards;
+        }
+        .about-hero .hero-badge i { animation: float 3s ease-in-out infinite; color: var(--gold); }
+        .about-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.2rem;
+            font-weight: 900;
+            line-height: 1.05;
+            margin-bottom: 16px;
+            text-shadow: 0 4px 50px rgba(0,0,0,0.12);
+            opacity: 0;
+            animation: fadeInUp 1s ease 1.1s forwards;
+        }
+        .about-hero h1 span {
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% auto;
+            animation: shimmerText 4s ease-in-out infinite;
+        }
+        .about-hero .hero-desc {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.7);
+            max-width: 650px;
+            margin: 0 auto 28px;
+            line-height: 1.9;
+            font-weight: 300;
+            opacity: 0;
+            animation: fadeInUp 1s ease 1.4s forwards;
+        }
+        .about-hero .hero-btn { opacity: 0; animation: fadeInUp 1s ease 1.7s forwards; }
+        .about-hero .hero-scroll {
+            position: absolute;
+            bottom: 35px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            color: rgba(255,255,255,0.12);
+            font-size: 0.5rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            animation: float 3s ease-in-out infinite;
+        }
+        .about-hero .hero-scroll i { font-size: 1.2rem; color: var(--gold-light); opacity: 0.2; }
+
+        /* ============================================================
+           HISTORIA
+           ============================================================ */
+        .about-history {
+            padding: 70px 0 60px;
+            background: var(--cream);
+            position: relative;
+        }
+        .history-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        .history-block.reverse { direction: rtl; }
+        .history-block.reverse > * { direction: ltr; }
+        .history-block .history-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-premium);
+            min-height: 300px;
+            background: var(--primary-dark);
+            transition: all 0.8s ease;
+        }
+        .history-block .history-image:hover { transform: scale(1.01); box-shadow: var(--shadow-hover); }
+        .history-block .history-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .history-block .history-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+            line-height: 1.15;
+        }
+        .history-block .history-text p {
+            color: var(--text-light);
+            line-height: 1.9;
+            font-weight: 300;
+            font-size: 0.95rem;
+        }
+
+        /* ============================================================
+           LÍNEA DE TIEMPO
+           ============================================================ */
+        .timeline-wrapper {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 0;
+        }
+        .timeline-line {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background: rgba(184,148,60,0.05);
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+        .timeline-line .fill {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0%;
+            background: var(--gradient-gold);
+            transition: height 1.8s ease;
+            border-radius: 2px;
+        }
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 45px;
+            position: relative;
+            z-index: 1;
+            opacity: 0;
+            transform: translateY(25px);
+            transition: all 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .timeline-item.visible { opacity: 1; transform: translateY(0); }
+        .timeline-item:nth-child(odd) { flex-direction: row; }
+        .timeline-item:nth-child(even) { flex-direction: row-reverse; }
+        .timeline-item .tl-dot {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--gradient-gold);
+            border: 2px solid var(--gold-light);
+            flex-shrink: 0;
+            margin: 0 32px;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 0 25px rgba(184,148,60,0.06);
+            transition: all 0.5s ease;
+        }
+        .timeline-item:hover .tl-dot { transform: scale(1.12); }
+        .timeline-item .tl-content {
+            flex: 1;
+            background: rgba(255,255,255,0.4);
+            backdrop-filter: blur(10px);
+            border-radius: 18px;
+            padding: 22px 26px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.5s ease;
+            max-width: 45%;
+        }
+        .timeline-item:hover .tl-content {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+            background: rgba(255,255,255,0.6);
+        }
+        .timeline-item .tl-content .tl-year {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.1;
+        }
+        .timeline-item .tl-content .tl-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin: 2px 0 4px;
+        }
+        .timeline-item .tl-content .tl-desc {
+            color: var(--text-light);
+            font-size: 0.85rem;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        /* ============================================================
+           MISIÓN Y VISIÓN - REDISEÑADO CON NÚMEROS GRANDES
+           ============================================================ */
+        .about-mission-vision {
+            padding: 90px 0 80px;
+            background: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        .about-mission-vision::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -15%;
+            width: 50%;
+            height: 80%;
+            background: radial-gradient(ellipse, rgba(184,148,60,0.04) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .about-mission-vision::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: -10%;
+            width: 50%;
+            height: 60%;
+            background: radial-gradient(ellipse, rgba(184,148,60,0.03) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .about-mission-vision .mv-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+            margin-top: 50px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-mission-vision .mv-card {
+            padding: 0;
+            border-radius: 28px;
+            background: var(--cream);
+            border: 1px solid rgba(184, 148, 60, 0.06);
+            transition: all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            opacity: 0;
+            transform: perspective(800px) rotateY(15deg) translateY(40px);
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+            cursor: pointer;
+        }
+        .about-mission-vision .mv-card.visible {
+            opacity: 1;
+            transform: perspective(800px) rotateY(0deg) translateY(0);
+        }
+        .about-mission-vision .mv-card:hover {
+            transform: translateY(-12px) scale(1.01);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.08);
+            border-color: rgba(184, 148, 60, 0.08);
+        }
+
+        /* ---- NÚMEROS GRANDES ---- */
+        .about-mission-vision .mv-card .mv-number {
+            position: absolute;
+            top: 12px;
+            right: 18px;
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2rem;
+            font-weight: 900;
+            color: var(--gold);
+            opacity: 0.04;
+            line-height: 1;
+            z-index: 0;
+            pointer-events: none;
+            letter-spacing: -1px;
+            transition: all 0.5s ease;
+        }
+
+        .about-mission-vision .mv-card:hover .mv-number {
+            opacity: 0.08;
+            transform: scale(1.05);
+        }
+
+        /* ---- IMAGEN COMPLETA ---- */
+        .about-mission-vision .mv-card .mv-image {
+            width: 100%;
+            height: auto;
+            min-height: 180px;
+            max-height: 260px;
+            overflow: hidden;
+            position: relative;
+            background: var(--cream);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-mission-vision .mv-card .mv-image img {
+            width: 100%;
+            height: auto;
+            max-height: 260px;
+            object-fit: contain;
+            transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+            display: block;
+            padding: 6px;
+            background: var(--cream);
+        }
+
+        .about-mission-vision .mv-card:hover .mv-image img {
+            transform: scale(1.05);
+        }
+
+        .about-mission-vision .mv-card .mv-image .image-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent 40%, rgba(44,31,20,0.3) 100%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .about-mission-vision .mv-card .mv-image .mv-badge {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(10px);
+            padding: 4px 14px;
+            border-radius: 50px;
+            font-size: 0.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            z-index: 2;
+        }
+
+        /* ---- CONTENIDO ---- */
+        .about-mission-vision .mv-card .mv-content {
+            padding: 22px 28px 32px;
+            position: relative;
+        }
+
+        .about-mission-vision .mv-card .mv-icon-wrap {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gradient-gold-soft);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 6px;
+            border: 1px solid rgba(184,148,60,0.04);
+            transition: all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .about-mission-vision .mv-card .mv-icon-wrap i {
+            font-size: 1.4rem;
+            color: var(--gold);
+            transition: all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .about-mission-vision .mv-card:hover .mv-icon-wrap {
+            background: var(--gradient-gold);
+            transform: scale(1.05) rotate(-4deg);
+        }
+
+        .about-mission-vision .mv-card:hover .mv-icon-wrap i {
+            color: var(--white);
+        }
+
+        .about-mission-vision .mv-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin: 2px 0 0px;
+            letter-spacing: -0.5px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .about-mission-vision .mv-card h3::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: var(--gradient-gold);
+            transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border-radius: 2px;
+        }
+
+        .about-mission-vision .mv-card:hover h3::after {
+            width: 100%;
+        }
+
+        .about-mission-vision .mv-card .mv-divider {
+            width: 35px;
+            height: 2px;
+            background: var(--gradient-gold);
+            margin: 8px 0 10px;
+            opacity: 0.15;
+            border-radius: 2px;
+            transition: all 0.5s ease;
+        }
+
+        .about-mission-vision .mv-card:hover .mv-divider {
+            width: 55px;
+            opacity: 0.3;
+        }
+
+        .about-mission-vision .mv-card p {
+            color: var(--text-light);
+            font-size: 0.88rem;
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .about-mission-vision .mv-card:hover p {
+            color: var(--text);
+        }
+
+        .about-mission-vision .mv-card .mv-tag {
+            display: inline-block;
+            font-size: 0.5rem;
+            font-weight: 500;
+            color: var(--gold);
+            opacity: 0.2;
+            letter-spacing: 2px;
+            transition: all 0.5s ease;
+            padding: 4px 0;
+        }
+
+        .about-mission-vision .mv-card:hover .mv-tag {
+            opacity: 0.6;
+        }
+
+        /* ---- EFECTOS DECORATIVOS ---- */
+        .about-mission-vision .mv-card .shine-effect {
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at 30% 50%, rgba(184,148,60,0.03) 0%, transparent 60%);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+            transform: rotate(25deg);
+            z-index: 2;
+        }
+        .about-mission-vision .mv-card:hover .shine-effect {
+            opacity: 1;
+        }
+
+        .about-mission-vision .mv-card .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--gold);
+            border-radius: 50%;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 3;
+        }
+        .about-mission-vision .mv-card .sparkle:nth-child(1) { top: 12%; right: 10%; animation: sparkle 4s ease-in-out infinite 0.3s; }
+        .about-mission-vision .mv-card .sparkle:nth-child(2) { bottom: 18%; left: 8%; animation: sparkle 4s ease-in-out infinite 1.2s; }
+        .about-mission-vision .mv-card .sparkle:nth-child(3) { top: 40%; right: 6%; animation: sparkle 4s ease-in-out infinite 2.2s; }
+        .about-mission-vision .mv-card .sparkle:nth-child(4) { bottom: 30%; right: 18%; animation: sparkle 4s ease-in-out infinite 0.7s; }
+
+        /* ============================================================
+           NUESTRO TRABAJO
+           ============================================================ */
+        .about-work {
+            padding: 80px 0;
+            background: var(--cream);
+            position: relative;
+        }
+        .about-work .work-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+        .about-work .work-card {
+            padding: 28px 24px 32px;
+            border-radius: 20px;
+            background: var(--white);
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0,0,0,0.02);
+            transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            opacity: 0;
+            transform: translateY(25px);
+            text-align: center;
+        }
+        .about-work .work-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .about-work .work-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(184, 148, 60, 0.04);
+        }
+        .about-work .work-card .work-icon-wrap {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: var(--gradient-gold-soft);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+        }
+        .about-work .work-card .work-icon-wrap .work-icon {
+            font-size: 1.4rem;
+            color: var(--gold);
+        }
+        .about-work .work-card .work-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.6rem;
+            font-weight: 700;
+            color: var(--gold);
+            opacity: 0.12;
+            letter-spacing: 2px;
+        }
+        .about-work .work-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: var(--primary);
+            margin: 4px 0 2px;
+        }
+        .about-work .work-card p {
+            color: var(--text-light);
+            font-size: 0.8rem;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        /* ============================================================
+           RAZONES PARA CONFIAR
+           ============================================================ */
+        .about-why {
+            padding: 80px 0;
+            background: var(--white);
+            position: relative;
+        }
+        .about-why .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            margin-top: 40px;
+        }
+        .about-why .why-item {
+            padding: 26px 18px 30px;
+            border-radius: 18px;
+            background: var(--cream);
+            text-align: center;
+            transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border: 1px solid rgba(184, 148, 60, 0.02);
+            opacity: 0;
+            transform: translateY(20px);
+            position: relative;
+        }
+        .about-why .why-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .about-why .why-item:hover {
+            background: var(--white);
+            border-color: rgba(184, 148, 60, 0.04);
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-4px);
+        }
+        .about-why .why-item .why-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.55rem;
+            font-weight: 700;
+            color: var(--gold);
+            opacity: 0.08;
+            letter-spacing: 2px;
+        }
+        .about-why .why-item .why-icon {
+            font-size: 2rem;
+            color: var(--gold);
+            margin: 4px 0;
+            display: inline-block;
+        }
+        .about-why .why-item h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-top: 2px;
+        }
+        .about-why .why-item .why-desc {
+            color: var(--text-muted);
+            font-size: 0.72rem;
+            font-weight: 300;
+            line-height: 1.5;
+            margin-top: 2px;
+        }
+
+        /* ============================================================
+           CONTADORES
+           ============================================================ */
+        .about-stats {
+            padding: 60px 0;
+            background: var(--gradient-dark);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        .about-stats .stats-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 600px;
+            height: 300px;
+            background: radial-gradient(ellipse, rgba(184,148,60,0.5) 0%, transparent 70%);
+            transform: translate(-50%, -50%);
+            opacity: 0.08;
+            animation: pulseGlow 4s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .about-stats .container { position: relative; z-index: 1; }
+        .about-stats .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            text-align: center;
+        }
+        .about-stats .stat-item {
+            padding: 24px 16px;
+            border-radius: 16px;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.02);
+            transition: all 0.6s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .about-stats .stat-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .about-stats .stat-item:hover {
+            background: rgba(255,255,255,0.03);
+            border-color: rgba(184,148,60,0.03);
+            transform: translateY(-4px);
+        }
+        .about-stats .stat-item .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 900;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+            background-size: 200% auto;
+            animation: shimmerText 4s ease-in-out infinite;
+            line-height: 1.1;
+        }
+        .about-stats .stat-item .stat-number .percent { font-size: 1.4rem; }
+        .about-stats .stat-item .stat-number.bounce { animation: counterBounce 0.3s ease; }
+        .about-stats .stat-item .stat-label {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.25);
+            margin-top: 4px;
+            font-weight: 300;
+        }
+
+        /* ============================================================
+           CTA REDISEÑADO - MÁS LIMPIO Y BONITO
+           ============================================================ */
+        .about-cta {
+            padding: 80px 0 90px;
+            background: var(--primary-dark);
+            color: var(--white);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -20%;
+            width: 60%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(184,148,60,0.03) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .about-cta .cta-decoration {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .about-cta .cta-line {
+            width: 30px;
+            height: 1px;
+            background: rgba(255,255,255,0.05);
+        }
+
+        .about-cta .cta-dot {
+            color: var(--gold-light);
+            font-size: 0.6rem;
+            opacity: 0.15;
+        }
+
+        .about-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .about-cta h2 span {
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .about-cta p {
+            color: rgba(255,255,255,0.35);
+            font-size: 0.95rem;
+            max-width: 520px;
+            margin: 0 auto 32px;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .about-cta .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ============================================================
+           FOOTER
+           ============================================================ */
+        footer {
+            width: 100%;
+            overflow: hidden;
+            background: var(--dark);
+            position: relative;
+        }
+        .footer-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr 1.2fr 1fr;
+            gap: 30px;
+            padding: 36px 0 28px;
+            border-bottom: 1px solid rgba(255,255,255,0.02);
+        }
+        .footer-col { display: flex; flex-direction: column; }
+        .footer-brand .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% auto;
+            animation: shimmerText 4s ease-in-out infinite;
+        }
+        .footer-brand .brand-slogan {
+            font-size: 0.55rem;
+            color: #8a7a6a;
+            letter-spacing: 4px;
+            font-weight: 300;
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+        .footer-contact { margin-top: 12px; display: flex; flex-direction: column; gap: 3px; }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.72rem;
+            color: #b8a89a;
+            line-height: 1.4;
+        }
+        .contact-item i { color: var(--gold); width: 14px; font-size: 0.65rem; flex-shrink: 0; text-align: center; }
+        .contact-item .email-small { font-size: 0.62rem; opacity: 0.8; }
+        .footer-title {
+            color: var(--gold);
+            font-family: 'Playfair Display', serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .footer-title::after { content: ''; display: block; width: 22px; height: 1.5px; background: var(--gradient-gold); opacity: 0.2; margin-top: 4px; border-radius: 2px; }
+        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 3px; padding: 0; margin: 0; }
+        .footer-links li a {
+            color: #b8a89a;
+            font-size: 0.72rem;
+            transition: 0.3s ease;
+            display: inline-block;
+        }
+        .footer-links li a:hover { color: #ffffff; padding-left: 4px; }
+        .social-icons { display: flex; gap: 8px; margin-top: 4px; flex-wrap: wrap; }
+        .social-icons a {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.02);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8a7a6a;
+            transition: var(--transition-bounce);
+            font-size: 0.75rem;
+        }
+        .social-icons a:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-3px); background: rgba(196,154,60,0.02); }
+        .footer-bottom { padding: 16px 0 14px; display: flex; flex-direction: column; gap: 10px; }
+        .footer-commitment {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            padding: 10px 16px;
+            background: rgba(255,255,255,0.01);
+            border-radius: 10px;
+            border-left: 2px solid rgba(196,154,60,0.04);
+        }
+        .commitment-icon { color: var(--gold); font-size: 0.9rem; opacity: 0.1; margin-top: 2px; flex-shrink: 0; }
+        .footer-commitment p { color: #b8a89a; font-size: 0.72rem; line-height: 1.6; margin: 0; font-weight: 300; }
+        .footer-commitment p strong { color: var(--gold); font-weight: 600; }
+        .footer-copy { text-align: center; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.01); }
+        .footer-copy p { color: #6a5a4a; font-size: 0.6rem; margin: 0; }
+        .copy-brand { color: var(--gold); font-weight: 600; }
+
+        .footer-landscape {
+            width: 100%;
+            height: 130px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(to bottom, var(--primary-dark), #1a120c);
+        }
+        .footer-landscape svg { width: 100%; height: 100%; position: absolute; bottom: 0; left: 0; }
+        .footer-landscape .stars { position: absolute; inset: 0; pointer-events: none; }
+        .footer-landscape .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 50%;
+            animation: pulseGlow 3s ease-in-out infinite;
+        }
+        .footer-landscape .star:nth-child(1) { top: 15%; left: 10%; animation-delay: 0s; }
+        .footer-landscape .star:nth-child(2) { top: 25%; left: 25%; animation-delay: 1s; }
+        .footer-landscape .star:nth-child(3) { top: 10%; left: 45%; animation-delay: 2s; }
+        .footer-landscape .star:nth-child(4) { top: 30%; left: 65%; animation-delay: 0.5s; }
+        .footer-landscape .star:nth-child(5) { top: 18%; left: 80%; animation-delay: 1.5s; }
+        .footer-landscape .star:nth-child(6) { top: 8%; left: 92%; animation-delay: 2.5s; }
+        .footer-landscape .star:nth-child(7) { top: 35%; left: 50%; animation-delay: 0.8s; }
+        .footer-landscape .star:nth-child(8) { top: 20%; left: 35%; animation-delay: 1.8s; }
+
+        /* ============================================================
+           WHATSAPP Y BACK TOP
+           ============================================================ */
+        .btn-whatsapp {
+            position: fixed;
+            bottom: 26px;
+            right: 26px;
+            z-index: 999;
+            background: #25d366;
+            color: white;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 30px rgba(37,211,102,0.1);
+            transition: var(--transition-bounce);
+        }
+        .btn-whatsapp:hover { transform: scale(1.08); }
+        .btn-back-top {
+            position: fixed;
+            bottom: 92px;
+            right: 26px;
+            z-index: 998;
+            background: rgba(255,255,255,0.03);
+            backdrop-filter: blur(10px);
+            color: var(--white);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            border: 1px solid rgba(255,255,255,0.02);
+            transition: var(--transition-bounce);
+            cursor: pointer;
+        }
+        .btn-back-top.visible { display: flex; }
+        .btn-back-top:hover { background: rgba(255,255,255,0.04); transform: translateY(-3px); }
+        .btn-back-top i { color: var(--gold-light); }
+
+        /* ============================================================
+           RESPONSIVE
+           ============================================================ */
+        @media (max-width: 1024px) {
+            .about-hero h1 { font-size: 3.2rem; }
+            .history-block { grid-template-columns: 1fr; gap: 30px; }
+            .history-block.reverse { direction: ltr; }
+            .history-block .history-image { min-height: 260px; }
+            .about-mission-vision .mv-grid { grid-template-columns: 1fr; gap: 28px; }
+            .about-work .work-grid { grid-template-columns: repeat(2, 1fr); }
+            .about-why .why-grid { grid-template-columns: repeat(2, 1fr); }
+            .about-stats .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .section-title { font-size: 2.2rem; }
+            .cursor { display: none; }
+        }
+
+        @media (max-width: 768px) {
+            .navbar { padding: 10px 0; }
+            .nav-logo img { height: 40px; }
+            .nav-divider { height: 26px; }
+            .nav-title .line1 { font-size: 0.45rem; }
+            .nav-title .line2 { font-size: 0.38rem; }
+            .nav-title .line3 { font-size: 0.32rem; }
+            .nav-brand-wrapper { gap: 6px; max-width: 55%; }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 270px;
+                height: 100vh;
+                background: rgba(44,31,20,0.96);
+                backdrop-filter: blur(24px);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 24px;
+                transition: var(--transition);
+                box-shadow: -8px 0 50px rgba(0,0,0,0.15);
+            }
+            .nav-links.open { right: 0; }
+            .hamburger { display: flex; }
+
+            .about-hero { min-height: 80vh; padding: 100px 0 60px; }
+            .about-hero h1 { font-size: 2.2rem; }
+            .about-hero .hero-desc { font-size: 0.9rem; }
+            .history-block .history-text h2 { font-size: 1.8rem; }
+            .about-mission-vision { padding: 60px 0; }
+            .about-mission-vision .mv-card .mv-number { font-size: 2.4rem; top: 8px; right: 12px; }
+            .about-mission-vision .mv-card .mv-image { min-height: 140px; max-height: 200px; }
+            .about-mission-vision .mv-card .mv-image img { max-height: 200px; }
+            .about-mission-vision .mv-card .mv-content { padding: 16px 20px 26px; }
+            .about-mission-vision .mv-card h3 { font-size: 1.2rem; }
+            .about-mission-vision .mv-card .mv-icon-wrap { width: 46px; height: 46px; }
+            .about-mission-vision .mv-card .mv-icon-wrap i { font-size: 1.3rem; }
+            .about-mission-vision .mv-card .mv-image .mv-badge { font-size: 0.4rem; padding: 4px 12px; top: 10px; right: 10px; }
+
+            .about-work .work-grid { grid-template-columns: 1fr; }
+            .about-work .work-card { padding: 24px 20px; }
+            .about-why .why-grid { grid-template-columns: 1fr 1fr; }
+            .about-stats .stats-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+            .about-stats .stat-item .stat-number { font-size: 2.2rem; }
+            .section-title { font-size: 1.8rem; }
+            .about-cta h2 { font-size: 2rem; }
+            .about-cta .cta-buttons { flex-direction: column; align-items: center; width: 100%; }
+            .about-cta .cta-buttons .btn-primary,
+            .about-cta .cta-buttons .btn-cta-outline {
+                width: 100%;
+                justify-content: center;
+                padding: 14px 28px;
+                font-size: 0.85rem;
+            }
+
+            .timeline-item { flex-direction: column !important; align-items: center; text-align: center; }
+            .timeline-item .tl-dot { margin: 0 0 14px 0; }
+            .timeline-item .tl-content { max-width: 100%; }
+            .timeline-line { left: 50%; }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                padding: 24px 0 16px;
+            }
+            .footer-col { text-align: center; align-items: center; }
+            .footer-title::after { margin: 4px auto 0; }
+            .footer-contact { align-items: center; }
+            .contact-item { text-align: center; justify-content: center; }
+            .social-icons { justify-content: center; }
+            .footer-commitment { flex-direction: column; align-items: center; text-align: center; }
+            .footer-brand { align-items: center; }
+            .cursor { display: none; }
+        }
+
+        @media (max-width: 480px) {
+            .about-hero h1 { font-size: 1.8rem; }
+            .about-hero .hero-badge { font-size: 0.5rem; padding: 6px 14px; }
+            .history-block .history-text h2 { font-size: 1.5rem; }
+            .section-title { font-size: 1.5rem; }
+            .about-cta h2 { font-size: 1.6rem; }
+            .about-mission-vision .mv-card .mv-number { font-size: 1.8rem; top: 6px; right: 10px; }
+            .about-mission-vision .mv-card .mv-image { min-height: 120px; max-height: 160px; }
+            .about-mission-vision .mv-card .mv-image img { max-height: 160px; padding: 4px; }
+            .about-mission-vision .mv-card .mv-content { padding: 12px 16px 20px; }
+            .about-mission-vision .mv-card h3 { font-size: 1rem; }
+            .about-mission-vision .mv-card p { font-size: 0.8rem; }
+            .about-mission-vision .mv-card .mv-icon-wrap { width: 40px; height: 40px; }
+            .about-mission-vision .mv-card .mv-icon-wrap i { font-size: 1.1rem; }
+            .about-mission-vision .mv-card .mv-image .mv-badge { font-size: 0.35rem; padding: 3px 10px; top: 8px; right: 8px; }
+            .about-work .work-card { padding: 20px 16px; }
+            .about-why .why-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+            .about-why .why-item { padding: 18px 12px; }
+            .about-why .why-item h4 { font-size: 0.75rem; }
+            .about-why .why-item .why-desc { font-size: 0.65rem; }
+            .about-stats .stats-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+            .about-stats .stat-item { padding: 14px 10px; }
+            .about-stats .stat-item .stat-number { font-size: 1.8rem; }
+            .about-stats .stat-item .stat-number .percent { font-size: 1.1rem; }
+            .about-stats .stat-item .stat-label { font-size: 0.65rem; }
+            .about-cta p { font-size: 0.8rem; }
+
+            .footer-grid { grid-template-columns: 1fr; gap: 20px; padding: 18px 0 14px; }
+            .footer-brand .brand-name { font-size: 1rem; }
+            .contact-item { font-size: 0.65rem; }
+            .footer-title { font-size: 0.75rem; }
+            .footer-links li a { font-size: 0.65rem; }
+            .footer-commitment p { font-size: 0.65rem; }
+            .social-icons a { width: 30px; height: 30px; font-size: 0.7rem; }
+            .footer-copy p { font-size: 0.5rem; }
+            .cursor { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================
+         CURSOR
+         ============================================================ -->
+    <div class="cursor" id="cursor">
+        <div class="glow"></div>
+    </div>
+
+    <!-- ============================================================
+         PRELOADER
+         ============================================================ -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-spinner"></div>
+            <div class="preloader-logo">CORPAPA</div>
+            <div class="preloader-sub">Coordinadora Rural de la Papa del Perú</div>
+            <div class="preloader-line"></div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         PROGRESS BAR
+         ============================================================ -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- ============================================================
+         NAVBAR
+         ============================================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand-wrapper">
+                <a href="index.html" class="nav-logo">
+                    <img src="imagenes/logo.png" alt="CORPAPA" />
+                </a>
+                <div class="nav-divider"></div>
+                <span class="nav-title">
+                    <span class="line1">COORDINADORA RURAL</span>
+                    <span class="line2">DE LA PAPA</span>
+                    <span class="line3">DEL PERÚ</span>
+                </span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html" class="active">Nosotros</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="proceso.html">Proceso</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html" class="btn-contact">Ubicanos</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="about-hero">
+        <div class="hero-bg" style="background-image: url('imagenes/portada.png');"></div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">
+                    <i class="fas fa-leaf"></i> Nosotros
+                </span>
+                <h1>Nuestra historia <span>nace en los Andes</span> del Perú</h1>
+                <p class="hero-desc">En las altas montañas de Ayacucho, donde la agricultura es parte de la identidad y la historia de sus comunidades, nació una organización con un propósito claro: proteger el legado de las papas nativas y mejorar la calidad de vida de quienes las cultivan.</p>
+                <div class="hero-btn">
+                    <a href="#history" class="btn-primary">
+                        <i class="fas fa-arrow-right"></i> Conoce nuestra historia
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Explorar</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         HISTORIA
+         ============================================================ -->
+    <section class="about-history" id="history">
+        <div class="container">
+
+            <div class="history-block">
+                <div class="history-image slide-left">
+                    <img src="imagenes/IMAGENESNOSOTROS/CULTIVAMOS1.jpg" alt="Agricultores de Ayacucho" />
+                </div>
+                <div class="history-text slide-right">
+                    <span class="section-badge"><i class="fas fa-clock"></i> Nuestra historia</span>
+                    <h2>Cultivando el futuro desde el <span class="highlight">corazón de los Andes</span></h2>
+                    <p>En las altas montañas de Ayacucho, donde la agricultura es parte de la identidad y la historia de sus comunidades, nació una organización con un propósito claro: proteger el legado de las papas nativas y mejorar la calidad de vida de quienes las cultivan.</p>
+                </div>
+            </div>
+
+            <div class="history-block reverse">
+                <div class="history-image slide-right">
+                    <img src="imagenes/IMAGENESNOSOTROS/CRESIMIENTO.jpg" alt="Crecimiento de CORPAPA" />
+                </div>
+                <div class="history-text slide-left">
+                    <span class="section-badge"><i class="fas fa-users"></i> Comunidad</span>
+                    <h2>Un camino construido con <span class="highlight">esfuerzo</span></h2>
+                    <p>Constituida legalmente el 30 de mayo de 2013, CORPAPA reúne hoy a más de 130 pequeños productores con parcelas en las comunidades de Huamanga, Cangallo, Huanta, La Mar y Vilcas Huamán. Más del 80% de nuestros asociados son familias ayacuchanas que siembran papa nativa de generación en generación, en suelos vírgenes que ellas mismas conocen palmo a palmo.</p>
+                </div>
+            </div>
+
+            <div class="history-block">
+                <div class="history-image slide-left">
+                    <img src="imagenes/portada.png" alt="Papas nativas de Ayacucho" />
+                </div>
+                <div class="history-text slide-right">
+                    <span class="section-badge"><i class="fas fa-seedling"></i> Legado</span>
+                    <h2>Tradición e innovación <span class="highlight">de la mano</span></h2>
+                    <p>El Perú alberga más de 3,000 variedades de papa, y CORPAPA trabaja para que ese tesoro no se pierda. Además de la papa nativa, transformamos olluco, mashua y oca en snacks, mermeladas y néctares bajo nuestra propia marca, <strong>Tuyapuy</strong>. Somos una red de personas que comparte conocimientos, protege la biodiversidad andina y apuesta por un futuro donde la tradición y la innovación avancen de la mano.</p>
+                </div>
+            </div>
+
+            <!-- LÍNEA DE TIEMPO -->
+            <div class="timeline-wrapper" id="timelineWrapper">
+                <div class="timeline-line">
+                    <div class="fill" id="timelineFill"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <div class="tl-year">2013</div>
+                        <div class="tl-title">Nace CORPAPA</div>
+                        <div class="tl-desc">Se constituye la Coordinadora Rural de la Papa del Perú como una asociación de pequeños productores de Ayacucho.</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <div class="tl-year">Crecimiento</div>
+                        <div class="tl-title">Más de 130 familias asociadas</div>
+                        <div class="tl-desc">La red se expande a comunidades de Huamanga, Cangallo, Huanta, La Mar y Vilcas Huamán, fortaleciendo capacidades mediante capacitación y asistencia técnica.</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <div class="tl-year">Tuyapuy</div>
+                        <div class="tl-title">Nace nuestra marca propia</div>
+                        <div class="tl-desc">Lanzamos Tuyapuy, línea de chips y snacks de papa nativa, junto con mermeladas y néctares elaborados a partir de olluco, mashua y oca.</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <div class="tl-year">Certificación</div>
+                        <div class="tl-title">Producción con certificación orgánica</div>
+                        <div class="tl-desc">Obtenemos certificación orgánica internacional que respalda prácticas agrícolas responsables con el suelo, el agua y el entorno andino.</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <div class="tl-year">2023</div>
+                        <div class="tl-title">Llegamos a Lima</div>
+                        <div class="tl-desc">Nuestras papas nativas ingresan a supermercados Wong, un logro que exigió garantizar inocuidad y contar con centro de distribución en Lima.</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <div class="tl-year">2024</div>
+                        <div class="tl-title">Fortalecimiento institucional</div>
+                        <div class="tl-desc">CORPAPA se incorpora al programa de fortalecimiento empresarial de NESsT para ampliar su impacto económico y social.</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <div class="tl-year">2025</div>
+                        <div class="tl-title">Camino a la Denominación de Origen</div>
+                        <div class="tl-desc">Impulsamos junto a la Municipalidad de Huamanga y la UNSCH la protección y Denominación de Origen de la papa nativa de Ayacucho.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         CIFRAS
+         ============================================================ -->
+    <section class="about-stats" id="statsSection">
+        <div class="stats-glow"></div>
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="130">0</div>
+                    <div class="stat-label">Productores asociados</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="80">0<span class="percent">%</span></div>
+                    <div class="stat-label">Familias ayacuchanas</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="5">0</div>
+                    <div class="stat-label">Provincias de Ayacucho</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="2013">0</div>
+                    <div class="stat-label">Año de fundación</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         MISIÓN Y VISIÓN - REDISEÑADO
+         ============================================================ -->
+    <section class="about-mission-vision">
+        <div class="container">
+            <div class="text-center fade-up">
+                <span class="section-badge"><i class="fas fa-star"></i> Nuestra identidad</span>
+                <h2 class="section-title">Una organización <span class="highlight">comprometida</span></h2>
+                <p class="section-subtitle">Cada acción que desarrollamos está orientada a fortalecer a las familias agricultoras, conservar la biodiversidad y generar oportunidades sostenibles.</p>
+            </div>
+
+            <div class="mv-grid">
+                <!-- Tarjeta 1: Misión -->
+                <div class="mv-card" data-delay="0">
+                    <span class="sparkle"></span>
+                    <span class="sparkle"></span>
+                    <span class="sparkle"></span>
+                    <span class="sparkle"></span>
+                    <div class="shine-effect"></div>
+                    <div class="mv-number">01</div>
+                    <div class="mv-image">
+                        <img src="imagenes/IMAGENESNOSOTROS/VICION.png" alt="Misión CORPAPA" />
+                        <div class="image-overlay"></div>
+                        <div class="mv-badge">MISIÓN</div>
+                    </div>
+                    <div class="mv-content">
+                        <div class="mv-icon-wrap">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Misión</h3>
+                        <div class="mv-divider"></div>
+                        <p>Fortalecer las capacidades de los pequeños productores mediante una producción sostenible, la conservación de las papas nativas y el acceso a mercados competitivos que permitan mejorar la calidad de vida de las familias agricultoras de Ayacucho.</p>
+                        <span class="mv-tag">✦ Nuestro propósito</span>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2: Visión -->
+                <div class="mv-card" data-delay="150">
+                    <span class="sparkle"></span>
+                    <span class="sparkle"></span>
+                    <span class="sparkle"></span>
+                    <span class="sparkle"></span>
+                    <div class="shine-effect"></div>
+                    <div class="mv-number">02</div>
+                    <div class="mv-image">
+                        <img src="imagenes/IMAGENESNOSOTROS/MISION.png" alt="Visión CORPAPA" />
+                        <div class="image-overlay"></div>
+                        <div class="mv-badge">VISIÓN</div>
+                    </div>
+                    <div class="mv-content">
+                        <div class="mv-icon-wrap">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Visión</h3>
+                        <div class="mv-divider"></div>
+                        <p>Ser una organización referente en el Perú por su liderazgo en la conservación de las papas nativas, la innovación agrícola, la producción sostenible y el desarrollo económico de las comunidades rurales.</p>
+                        <span class="mv-tag">✦ Nuestro horizonte</span>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3: Propósito -->
+                <div class="mv-card" data-delay="300">
+                    <span class="sparkle"></span>
+                    <span class="sparkle"></span>
+                    <span class="sparkle"></span>
+                    <span class="sparkle"></span>
+                    <div class="shine-effect"></div>
+                    <div class="mv-number">03</div>
+                    <div class="mv-image">
+                        <img src="imagenes/IMAGENESNOSOTROS/PROPOSITO.png" alt="Propósito CORPAPA" />
+                        <div class="image-overlay"></div>
+                        <div class="mv-badge">PROPÓSITO</div>
+                    </div>
+                    <div class="mv-content">
+                        <div class="mv-icon-wrap">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Propósito</h3>
+                        <div class="mv-divider"></div>
+                        <p>Preservar el patrimonio agrícola de las papas nativas y construir un futuro con mayores oportunidades para las familias productoras, promoviendo una agricultura responsable que contribuya al desarrollo sostenible del país.</p>
+                        <span class="mv-tag">✦ Nuestra razón de ser</span>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 4: Esencia -->
+                <div class="mv-card" data-delay="450">
+                    <span class="sparkle"></span>
+                    <span class="sparkle"></span>
+                    <span class="sparkle"></span>
+                    <span class="sparkle"></span>
+                    <div class="shine-effect"></div>
+                    <div class="mv-number">04</div>
+                    <div class="mv-image">
+                        <img src="imagenes/IMAGENESNOSOTROS/ESENCIA.png" alt="Esencia CORPAPA" />
+                        <div class="image-overlay"></div>
+                        <div class="mv-badge">ESENCIA</div>
+                    </div>
+                    <div class="mv-content">
+                        <div class="mv-icon-wrap">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Nuestra esencia</h3>
+                        <div class="mv-divider"></div>
+                        <p>Trabajamos junto a las comunidades andinas promoviendo la cooperación, la innovación y el respeto por la biodiversidad.</p>
+                        <span class="mv-tag">✦ Nuestro legado</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         RAZONES PARA CONFIAR
+         ============================================================ -->
+    <section class="about-why">
+        <div class="container">
+            <div class="text-center fade-up">
+                <span class="section-badge"><i class="fas fa-check-circle"></i> ¿Por qué elegir CORPAPA?</span>
+                <h2 class="section-title">Razones para <span class="highlight">confiar</span></h2>
+                <p class="section-subtitle">Elegir CORPAPA significa apostar por una organización que combina tradición, conocimiento y compromiso con el desarrollo sostenible.</p>
+            </div>
+
+            <div class="why-grid" id="whyGrid">
+                <div class="why-item">
+                    <div class="why-number">01</div>
+                    <div class="why-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <h4>Más de una década de trabajo</h4>
+                    <div class="why-desc">Experiencia y trayectoria en la agricultura familiar andina</div>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-number">02</div>
+                    <div class="why-icon"><i class="fas fa-seedling"></i></div>
+                    <h4>Conservación de variedades nativas</h4>
+                    <div class="why-desc">Protegemos la biodiversidad de las papas del Perú</div>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-number">03</div>
+                    <div class="why-icon"><i class="fas fa-leaf"></i></div>
+                    <h4>Producción responsable</h4>
+                    <div class="why-desc">Comprometidos con el medio ambiente y la sostenibilidad</div>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-number">04</div>
+                    <div class="why-icon"><i class="fas fa-users"></i></div>
+                    <h4>Agricultura familiar</h4>
+                    <div class="why-desc">Fortalecimiento de las familias productoras de Ayacucho</div>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-number">05</div>
+                    <div class="why-icon"><i class="fas fa-qrcode"></i></div>
+                    <h4>Productos con trazabilidad</h4>
+                    <div class="why-desc">Transparencia desde el campo hasta tu mesa</div>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-number">06</div>
+                    <div class="why-icon"><i class="fas fa-city"></i></div>
+                    <h4>Desarrollo económico local</h4>
+                    <div class="why-desc">Generamos oportunidades en las comunidades rurales</div>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-number">07</div>
+                    <div class="why-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h4>Innovación en procesos agrícolas</h4>
+                    <div class="why-desc">Tradición e innovación avanzan de la mano</div>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-number">08</div>
+                    <div class="why-icon"><i class="fas fa-globe-americas"></i></div>
+                    <h4>Compromiso con la biodiversidad</h4>
+                    <div class="why-desc">Preservamos el patrimonio agrícola del Perú</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         CTA 
+         ============================================================ -->
+    <section class="about-cta">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-decoration">
+                    <span class="cta-line"></span>
+                    <span class="cta-dot">✦</span>
+                    <span class="cta-line"></span>
+                </div>
+                <h2>Construyamos juntos un <span>futuro sostenible</span></h2>
+                <p>Descubre nuestros productos, conoce el trabajo de nuestros productores y acompáñanos en la conservación de uno de los patrimonios agrícolas más importantes del Perú.</p>
+                <div class="cta-buttons">
+                    <a href="productos.html" class="btn-primary">
+                        <i class="fas fa-seedling"></i> Ver productos
+                    </a>
+                    <a href="contacto.html" class="btn-cta-outline">
+                        <i class="fas fa-headset"></i> Contáctanos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-brand">
+                        <div class="brand-name">COR<span>PAPA</span></div>
+                        <span class="brand-slogan">Coordinadora Rural de la Papa del Perú</span>
+                    </div>
+                    <div class="footer-contact">
+                        <div class="contact-item"><i class="fas fa-phone"></i><span>(+51) 943 247 000</span></div>
+                        <div class="contact-item"><i class="fas fa-phone"></i><span>(+51) 918 031 109</span></div>
+                        <div class="contact-item"><i class="fas fa-phone"></i><span>(+51) 066 637 909</span></div>
+                        <div class="contact-item"><i class="fas fa-envelope"></i><span>corpapaayacucho@gmail.com</span></div>
+                        <div class="contact-item"><i class="fas fa-envelope"></i><span class="email-small">administracioncorpapa@papasandinas.com</span></div>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Enlaces rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="proceso.html">Proceso Productivo</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Nuestros productos</h4>
+                    <ul class="footer-links">
+                        <li><a href="productos.html#nativas">Papas Nativas</a></li>
+                        <li><a href="productos.html#tradicionales">Papas Tradicionales</a></li>
+                        <li><a href="productos.html#organicos">Papas Orgánicas</a></li>
+                        <li><a href="productos.html">Ver todas las variedades</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Síguenos</h4>
+                    <div class="social-icons">
+                        <a href="https://web.facebook.com/corpapape" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/corpapaperu/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-commitment">
+                    <span class="commitment-icon">◆</span>
+                    <p><strong>Nuestro Compromiso:</strong> Trabajamos junto a las familias agricultoras para conservar la biodiversidad de las papas nativas del Perú, fortaleciendo la agricultura familiar, promoviendo el comercio justo y llevando productos de alta calidad desde los Andes hasta la mesa de nuestros consumidores.</p>
+                </div>
+                <div class="footer-copy">
+                    <p>&copy; 2026 <span class="copy-brand">CORPAPA</span> — Coordinadora Rural de la Papa del Perú. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+         WHATSAPP Y BACK TOP
+         ============================================================ -->
+    <!-- Botón de WhatsApp con el número y mensaje predefinido -->
+    <a href="https://wa.me/51943247000?text=Hola%20CORPAPA%2C%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20productos%20y%20servicios." class="btn-whatsapp" id="whatsappBtn" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <!-- Etiqueta flotante al lado del botón de WhatsApp -->
+    <div class="whatsapp-label" id="whatsappLabel">
+        <i class="fas fa-comment-dots"></i> ¡Escribemos!
+    </div>
+    <button class="btn-back-top" id="backTopBtn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Estilos adicionales para la etiqueta flotante -->
+    <style>
+        .whatsapp-label {
+            position: fixed;
+            bottom: 92px;
+            right: 86px;
+            z-index: 998;
+            background: rgba(37, 211, 102, 0.95);
+            backdrop-filter: blur(10px);
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+            animation: floatLabel 3s ease-in-out infinite;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            pointer-events: none;
+        }
+        .whatsapp-label i {
+            font-size: 0.9rem;
+            animation: pulseIcon 1.5s ease-in-out infinite;
+        }
+        @keyframes floatLabel {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+        }
+        @keyframes pulseIcon {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        @media (max-width: 768px) {
+            .whatsapp-label {
+                bottom: 80px;
+                right: 76px;
+                font-size: 0.7rem;
+                padding: 6px 12px;
+            }
+        }
+        @media (max-width: 480px) {
+            .whatsapp-label {
+                bottom: 70px;
+                right: 68px;
+                font-size: 0.6rem;
+                padding: 4px 10px;
+            }
+        }
+    </style>
+
+    <!-- ============================================================
+         SCRIPTS
+         ============================================================ -->
+    <script>
+        // ============================================================
+        // CURSOR
+        // ============================================================
+        (function() {
+            const cursor = document.getElementById('cursor');
+            if (!cursor) return;
+            document.addEventListener('mousemove', function(e) {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+            document.querySelectorAll('a, button, .btn-primary, .btn-cta-outline, .work-card, .mv-card, .why-item, .timeline-item, .stat-item').forEach(function(el) {
+                el.addEventListener('mouseenter', function() { cursor.classList.add('hover'); });
+                el.addEventListener('mouseleave', function() { cursor.classList.remove('hover'); });
+            });
+        })();
+
+        // ============================================================
+        // PRELOADER
+        // ============================================================
+        (function() {
+            window.addEventListener('load', function() {
+                const preloader = document.getElementById('preloader');
+                preloader.classList.add('hidden');
+                setTimeout(function() { preloader.style.display = 'none'; }, 1200);
+            });
+        })();
+
+        // ============================================================
+        // PROGRESS BAR
+        // ============================================================
+        (function() {
+            const progress = document.getElementById('progressBar');
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                progress.style.width = (scrollTop / docHeight * 100) + '%';
+            });
+        })();
+
+        // ============================================================
+        // NAVBAR
+        // ============================================================
+        (function() {
+            const navbar = document.getElementById('navbar');
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+            let lastScroll = 0;
+            let ticking = false;
+            let isHidden = false;
+            let scrollTimeout;
+
+            window.addEventListener('scroll', function() {
+                const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                if (!ticking) {
+                    window.requestAnimationFrame(function() {
+                        if (currentScroll > 60) {
+                            navbar.classList.add('scrolled');
+                            if (currentScroll > lastScroll && currentScroll > 80) {
+                                clearTimeout(scrollTimeout);
+                                if (!isHidden) {
+                                    navbar.classList.remove('visible-nav');
+                                    navbar.classList.add('hidden-nav');
+                                    isHidden = true;
+                                }
+                                scrollTimeout = setTimeout(function() {
+                                    if (isHidden) {
+                                        navbar.classList.remove('hidden-nav');
+                                        navbar.classList.add('visible-nav');
+                                        isHidden = false;
+                                    }
+                                }, 400);
+                            } else if (currentScroll < lastScroll) {
+                                clearTimeout(scrollTimeout);
+                                if (isHidden) {
+                                    navbar.classList.remove('hidden-nav');
+                                    navbar.classList.add('visible-nav');
+                                    isHidden = false;
+                                }
+                            }
+                        } else {
+                            navbar.classList.remove('scrolled');
+                            navbar.classList.remove('hidden-nav');
+                            navbar.classList.add('visible-nav');
+                            isHidden = false;
+                            clearTimeout(scrollTimeout);
+                        }
+                        lastScroll = currentScroll;
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+
+            setTimeout(() => { navbar.classList.add('visible-nav'); }, 1700);
+
+            if (hamburger) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    navLinks.classList.toggle('open');
+                });
+            }
+
+            document.querySelectorAll('.nav-links a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    if (hamburger) hamburger.classList.remove('active');
+                    if (navLinks) navLinks.classList.remove('open');
+                    navbar.classList.remove('hidden-nav');
+                    navbar.classList.add('visible-nav');
+                    isHidden = false;
+                    clearTimeout(scrollTimeout);
+                });
+            });
+        })();
+
+        // ============================================================
+        // SCROLL REVEAL
+        // ============================================================
+        (function() {
+            document.querySelectorAll('.fade-up, .slide-left, .slide-right').forEach(function(el) {
+                const observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+                    });
+                }, { threshold: 0.12 });
+                observer.observe(el);
+            });
+        })();
+
+        // ============================================================
+        // LÍNEA DE TIEMPO
+        // ============================================================
+        (function() {
+            const items = document.querySelectorAll('.timeline-item');
+            const fill = document.getElementById('timelineFill');
+            let timelineAnimated = false;
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting && !timelineAnimated) {
+                        timelineAnimated = true;
+                        items.forEach(function(item, index) {
+                            setTimeout(function() { item.classList.add('visible'); }, 150 + index * 200);
+                        });
+                        setTimeout(function() { fill.style.height = '100%'; }, 300);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            const wrapper = document.getElementById('timelineWrapper');
+            if (wrapper) observer.observe(wrapper);
+        })();
+
+        // ============================================================
+        // MISIÓN Y VISIÓN - CON ANIMACIÓN
+        // ============================================================
+        (function() {
+            const cards = document.querySelectorAll('.mv-card');
+            if (cards.length) {
+                let animated = false;
+                const observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting && !animated) {
+                            animated = true;
+                            cards.forEach(function(card, index) {
+                                const delay = parseInt(card.getAttribute('data-delay')) || index * 150;
+                                setTimeout(function() {
+                                    card.classList.add('visible');
+                                }, delay);
+                            });
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.15 });
+                const grid = document.querySelector('.mv-grid');
+                if (grid) observer.observe(grid);
+            }
+        })();
+
+        // ============================================================
+        // WORK
+        // ============================================================
+        (function() {
+            const cards = document.querySelectorAll('.work-card');
+            if (cards.length) {
+                const observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            cards.forEach(function(card, index) {
+                                setTimeout(function() { card.classList.add('visible'); }, 100 + index * 80);
+                            });
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.12 });
+                const grid = document.getElementById('workGrid');
+                if (grid) observer.observe(grid);
+            }
+        })();
+
+        // ============================================================
+        // WHY
+        // ============================================================
+        (function() {
+            const items = document.querySelectorAll('.why-item');
+            if (items.length) {
+                const observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            items.forEach(function(item, index) {
+                                setTimeout(function() { item.classList.add('visible'); }, 80 + index * 60);
+                            });
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.12 });
+                const grid = document.getElementById('whyGrid');
+                if (grid) observer.observe(grid);
+            }
+        })();
+
+        // ============================================================
+        // CONTADORES
+        // ============================================================
+        (function() {
+            const section = document.getElementById('statsSection');
+            if (!section) return;
+            const items = section.querySelectorAll('.stat-item');
+            const counters = section.querySelectorAll('.stat-number');
+            let counted = false;
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        items.forEach(function(item, index) {
+                            setTimeout(function() { item.classList.add('visible'); }, 100 + index * 120);
+                        });
+                        if (!counted) {
+                            counted = true;
+                            counters.forEach(function(counter) {
+                                let target = parseInt(counter.getAttribute('data-target'), 10);
+                                let current = 0;
+                                const increment = Math.ceil(target / 50);
+                                const timer = setInterval(function() {
+                                    current += increment;
+                                    if (current >= target) {
+                                        current = target;
+                                        clearInterval(timer);
+                                        counter.classList.add('bounce');
+                                        setTimeout(function() { counter.classList.remove('bounce'); }, 400);
+                                    }
+                                    if (counter.querySelector('.percent')) {
+                                        counter.innerHTML = current.toLocaleString() + '<span class="percent">%</span>';
+                                    } else {
+                                        counter.textContent = current.toLocaleString();
+                                    }
+                                }, 30);
+                            });
+                        }
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+            observer.observe(section);
+        })();
+
+        // ============================================================
+        // BACK TOP
+        // ============================================================
+        (function() {
+            const btn = document.getElementById('backTopBtn');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) { btn.classList.add('visible'); }
+                else { btn.classList.remove('visible'); }
+            });
+            btn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+        })();
+
+        // ============================================================
+        // WHATSAPP - PULSACIÓN
+        // ============================================================
+        (function() {
+            const btn = document.getElementById('whatsappBtn');
+            setInterval(function() {
+                btn.style.transform = 'scale(1.06)';
+                setTimeout(function() { btn.style.transform = 'scale(1)'; }, 300);
+            }, 4000);
+        })();
+
+        // ============================================================
+        // TILT 3D EN TARJETAS
+        // ============================================================
+        (function() {
+            if (window.matchMedia('(pointer: coarse)').matches) return;
+            const tiltEls = document.querySelectorAll('.mv-card, .work-card, .why-item');
+            tiltEls.forEach(function(el) {
+                let raf = null;
+                el.style.transformStyle = 'preserve-3d';
+                el.addEventListener('mousemove', function(e) {
+                    const rect = el.getBoundingClientRect();
+                    const x = (e.clientX - rect.left) / rect.width - 0.5;
+                    const y = (e.clientY - rect.top) / rect.height - 0.5;
+                    if (raf) cancelAnimationFrame(raf);
+                    raf = requestAnimationFrame(function() {
+                        el.style.transform = 'translateY(-8px) perspective(800px) rotateX(' + (y * -6) + 'deg) rotateY(' + (x * 8) + 'deg)';
+                    });
+                });
+                el.addEventListener('mouseleave', function() {
+                    if (raf) cancelAnimationFrame(raf);
+                    el.style.transform = '';
+                });
+            });
+        })();
+
+        // ============================================================
+        // PARALLAX SUAVE EN EL HERO
+        // ============================================================
+        (function() {
+            const heroBg = document.querySelector('.about-hero .hero-bg');
+            const heroContent = document.querySelector('.about-hero .hero-content');
+            if (!heroBg || window.matchMedia('(pointer: coarse)').matches) return;
+            heroBg.style.animation = 'none';
+            document.querySelector('.about-hero').addEventListener('mousemove', function(e) {
+                const x = (e.clientX / window.innerWidth - 0.5) * 2;
+                const y = (e.clientY / window.innerHeight - 0.5) * 2;
+                heroBg.style.transform = 'scale(1.06) translate(' + (x * -10) + 'px, ' + (y * -6) + 'px)';
+                if (heroContent) heroContent.style.transform = 'translate(' + (x * 6) + 'px, ' + (y * 4) + 'px)';
+            });
+        })();
+
+        console.log('%c🏔️ CORPAPA - Nosotros Premium Rediseñado', 'color:#b8943c;font-size:20px;font-weight:bold;');
+        console.log('%c🌸 Misión y Visión con números grandes y diseño más limpio', 'color:#d4b87a;font-size:14px;');
+        console.log('%c✨ CTA rediseñado más bonito y claro', 'color:#f0e6c0;font-size:12px;');
+        console.log('%c📱 Totalmente responsivo', 'color:#f0e6c0;font-size:12px;');
+        console.log('%c💬 Botón de WhatsApp con etiqueta flotante', 'color:#25d366;font-size:12px;');
+    </script>
+</body>
+</html>

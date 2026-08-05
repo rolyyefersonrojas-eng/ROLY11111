@@ -1,0 +1,19 @@
+window.local_cycleBottomradio_v8_14_data = [
+{
+ bulletimage: "index_htm_files/688.png",
+ image: "index_htm_files/1109.jpg",
+ link: "#"
+},
+{
+ image: "index_htm_files/1110.jpg",
+ link: "#"
+},
+{
+ image: "index_htm_files/1111.jpg",
+ link: "#"
+},
+{
+ image: "index_htm_files/1112.jpg",
+ link: "#"
+}
+];
